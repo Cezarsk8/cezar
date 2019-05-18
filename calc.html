@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+	<head>
+		<title>Calculador</title>
+		<link href="css\sigep.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="box">
+		<h2 class="best">Calculador ECOMMERCE 1</h2>
+		<form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
+			<input name="nCdEmpresa" value="14150239" type="hidden">
+			<input name="sDsSenha" value="09003185" type="hidden">
+			<input name="nCdServico" value="04162,04669" type="hidden">
+		<fieldset><legend>CEP</legend>
+			<div class="row">
+				<div class="cell">
+					<label>CEP de Origem</label><br/>
+					<input name="sCepOrigem" maxlength="8" placeholder="Sem espaço">
+				</div>
+				<div class="cell">
+					<label>CEP de Destino</label><br/>
+					<input name="sCepDestino" maxlength="8" placeholder="Sem espaço">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset><legend>Dimensões</legend>
+			<div class="row">
+				<div class="cell">
+					<label>Peso</label><br/>
+					<input name="nVlPeso" placeholder="kg">
+				</div>
+				<div class="cell">
+					<label>Comprimento</label><br/>
+					<input name="nVlComprimento" placeholder="cm">
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<label>Altura</label><br/>
+					<input name="nVlAltura" placeholder="cm">
+				</div>
+				<div class="cell">
+					<label>Largura</label><br/>
+					<input name="nVlLargura" placeholder="cm">
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<label>Formato</label><br/>
+					<select name="nCdFormato">
+						<option value="1">Caixa</option>
+						<option value="2">Rolo</option>
+						<option value="3">Envelope</option>
+					</select><br/>
+				</div>
+				<div class="cell">
+					<label>Diâmetro</label><br/>
+					<input name="nVlDiametro" value="0" placeholder="Diâmetro cm">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset><legend>Serviços Adicionais</legend>
+			<div class="row">
+				<div class="cell">
+					<label>Valor Declarado</label><br/>
+					<input name="nVlValorDeclarado" value="0" placeholder="Valor Declarado"></br>
+				</div>
+				<div class="cell"><br/>
+					<input name="sCdAvisoRecebimento" type="checkbox" value="S">
+					<label>AR</label><br/>
+					<input name="sCdMaoPropria" type="checkbox" value="S">
+					<label>Valor Declarado</label>
+				</div>
+			</div>
+		</fieldset>
+			<input type="submit" value="Pesquisar">
+		</div>
+		<form action="http://ws.correios.com.br/calculador/popuptarifa.aspx" method="get">
+		<input name="StrRetorno" value="http://ws.correios.com.br/calculador/popuptarifa.aspx" type="hidden">
+	</body>
+</html>
+			<!--
+				Retorno em XML
+				<input name="StrRetorno" value="XML" target="_blank" type="hidden">
+				<input value="Consultar" type="submit">
+
+				Adicionar campo "Data da Postagem" para averiguação de prazo
+
+				Cadastro de Destinatários para o cliente que faz login
+
+				Disclaimer que não faz parte dos Correios
+			-->
