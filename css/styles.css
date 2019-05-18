@@ -1,25 +1,26 @@
 /*----TAG----*/
 body {
-  margin: 0;
+  color: white;
   text-align: center;
   font-family: 'Merriweather Sans', sans-serif;
+  margin: 0;
 }
 
 h1 {
-  color: #085f63;
+  color: #f0eec8;
   font-size: 5rem;
   margin-top: 50px auto 0 auto;
   font-family: 'Fredericka the Great', cursive;
 }
 
 h2 {
-  color: #085f63;
+  color: #f0eec8;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
 }
 
 h3 {
-  color: #085f63;
+  color: #f0eec8;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,21 +28,25 @@ img {
   margin-top: 50px;
 }
 
+p {
+  margin: 0;
+}
+
 /*----CLASS----*/
 
 .top {
-  background-color: #f5e1da;
+  background-color: #00b7a8;
   padding-top: 100px;
   position: relative;
 }
 
 .middle-container{
-  background-color: #f1f1f1;
-  padding: 100px auto 100px auto;
+  background-color: #096386;
+  padding: 2rem; 
 }
 
 .bottom-container{
-  background-color: #49beb7;
+  background-color: #0c084c;
 }
 
 /*----ID----*/
@@ -50,6 +55,15 @@ img {
   left: 300px;
   position: absolute;
   width: 200px;
+}
+
+#disclaimer {
+  font-size: 0.5rem;
+}
+
+#icon {
+  height: 5rem;
+  width: auto;
 }
 
 #top-cloud {
