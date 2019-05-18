@@ -1,0 +1,68 @@
+/*----TAG----*/
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-top: 50px auto 0 auto;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  margin-top: 50px;
+}
+
+/*----CLASS----*/
+
+.top {
+  background-color: #f7e0a3;
+  padding-top: 100px;
+  position: relative;
+}
+
+.middle-container{
+  background-color: #fffde8;
+  padding: 100px auto 100px auto;
+}
+
+.bottom-container{
+  background-color: #f09c67;
+}
+
+/*----ID----*/
+#bottom-cloud {
+  bottom: 300px;
+  left: 300px;
+  position: absolute;
+  width: 200px;
+}
+
+#top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+  width: 200px;
+}
+
+#mountain {
+  height: 35rem;
+  width: auto;
+}
+
+#photo {
+  border-radius: 100%;
+  height: auto;
+  width: 200px;
+}
