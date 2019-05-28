@@ -1,27 +1,37 @@
 /*----TAG----*/
+
+a{
+  color:#11999E;
+  font-family: 'Merriweather', serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
 body {
-  color: white;
-  text-align: center;
-  font-family: 'Merriweather Sans', sans-serif;
+  color: #40514E;
+  font-family: 'Merriweather', serif;
   margin: 0;
+  text-align: center;
 }
 
 h1 {
-  color: #f0eec8;
-  font-size: 5rem;
-  margin-top: 50px auto 0 auto;
-  font-family: 'Fredericka the Great', cursive;
+  color: #66BFBF;
+  font-size: 5.625rem;
+  margin: 50px auto 0 auto;
+  font-family: 'Cabin Sketch', cursive;
 }
 
 h2 {
-  color: #f0eec8;
-  font-family: 'Montserrat', sans-serif;
+  color: #66BFBF;
+  font-family: 'Barlow', sans-serif;
   font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
 }
 
 h3 {
-  color: #f0eec8;
-  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+  font-family: 'Barlow', sans-serif;
 }
 
 img {
@@ -29,30 +39,69 @@ img {
 }
 
 p {
-  margin: 0;
+  line-height: 2;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
 }
 
 /*----CLASS----*/
 
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+}
+
 .top {
-  background-color: #00b7a8;
+  background-color: #E4f9f5;
   padding-top: 100px;
   position: relative;
 }
 
 .middle-container{
-  background-color: #096386;
-  padding: 2rem; 
+  margin-left: 100px 0;
 }
 
 .bottom-container{
-  background-color: #0c084c;
+  background-color: #66BFBF;
+}
+
+.skill-row{
+  line-height: 2;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  width: 50%;
+}
+
+.skill-img-left{
+  float:left;
+  margin: 30px 30px 30px auto;
+}
+
+.skill-img-right{
+  float:right;
+  margin: 30px auto 30px 30px;
 }
 
 /*----ID----*/
+
+#bio{
+  width: 30%;
+  margin: auto;
+}
+
+#contact{
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
 #bottom-cloud {
   bottom: 300px;
-  left: 300px;
+  left: 250px;
   position: absolute;
   width: 200px;
 }
@@ -69,13 +118,13 @@ p {
 #top-cloud {
   position: absolute;
   right: 300px;
-  top: 50px;
-  width: 200px;
+  top: 40px;
+  width: 10%
 }
 
 #mountain {
-  height: 35rem;
-  width: auto;
+  height: auto;
+  width: 50%;
 }
 
 #photo {
