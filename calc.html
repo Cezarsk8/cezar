@@ -2,26 +2,36 @@
 <html lang="pt">
 <meta charset="UTF-8">
 	<head>
-		<title>Calculador</title>
+		<title>Calculador de Preço e Prazo</title>
 		<link href="css\sigep.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<div class="box">
-		<h2 class="best">Calculador Tabela 2.0</h2>
+		<h2 class="best">Calculador de Preço e Prazo</h2>
 		<form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
-			<input name="nCdEmpresa" value="" type="hidden">
-			<input name="sDsSenha" value="" type="hidden">
 			<input name="nCdServico" value="04162,04669" type="hidden">
+		<fieldset><legend>Usuário</legend>
+			<div class="row">
+				<div class="cell">
+					<label>Código Administrativo</label><br/>
+					<input name="nCdEmpresa" maxlength="8" placeholder="Verificar ICC">
+				</div>
+				<div class="cell">
+					<label>Senha</label><br/>
+					<input name="sDsSenha" maxlength="8" placeholder="8 dígitos do CNPJ">
+				</div>
+			</div>
+		</fieldset>
 		<fieldset><legend>CEP</legend>
 			<div class="row">
 				<div class="cell">
 					<label>CEP de Origem</label><br/>
-					<input name="sCepOrigem" maxlength="8" placeholder="Sem espaço">
+					<input name="sCepOrigem" maxlength="8" placeholder="Sem espaço ou hífen">
 				</div>
 				<div class="cell">
 					<label>CEP de Destino</label><br/>
-					<input name="sCepDestino" maxlength="8" placeholder="Sem espaço">
+					<input name="sCepDestino" maxlength="8" placeholder="Sem espaço ou hífen">
 				</div>
 			</div>
 		</fieldset>
@@ -29,21 +39,21 @@
 			<div class="row">
 				<div class="cell">
 					<label>Peso</label><br/>
-					<input name="nVlPeso" placeholder="kg">
+					<input name="nVlPeso" placeholder="kg  (Mín: 0.1 Max: 30)">
 				</div>
 				<div class="cell">
 					<label>Comprimento</label><br/>
-					<input name="nVlComprimento" placeholder="cm">
+					<input name="nVlComprimento" placeholder="cm  (Mín: 16 Max: 105)">
 				</div>
 			</div>
 			<div class="row">
 				<div class="cell">
 					<label>Altura</label><br/>
-					<input name="nVlAltura" placeholder="cm">
+					<input name="nVlAltura" placeholder="cm  (Mín: 2 Max: 105)">
 				</div>
 				<div class="cell">
 					<label>Largura</label><br/>
-					<input name="nVlLargura" placeholder="cm">
+					<input name="nVlLargura" placeholder="cm  (Mín: 11 Max: 105)">
 				</div>
 			</div>
 			<div class="row">
@@ -57,7 +67,7 @@
 				</div>
 				<div class="cell">
 					<label>Diâmetro</label><br/>
-					<input name="nVlDiametro" value="0" placeholder="Diâmetro cm">
+					<input name="nVlDiametro" placeholder="cm  (Formato Rolo)" value="0">
 				</div>
 			</div>
 		</fieldset>
@@ -65,13 +75,13 @@
 			<div class="row">
 				<div class="cell">
 					<label>Valor Declarado</label><br/>
-					<input name="nVlValorDeclarado" value="0" placeholder="Valor Declarado"></br>
+					<input name="nVlValorDeclarado" placeholder="R$ (Máx 10.000)" value="0"></br>
 				</div>
 				<div class="cell"><br/>
-					<input name="sCdAvisoRecebimento" type="checkbox" value="S">
-					<label>AR</label><br/>
-					<input name="sCdMaoPropria" type="checkbox" value="S">
-					<label>Valor Declarado</label>
+					<input name="sCdAvisoRecebimento" type="checkbox" value="N">
+					<label>Aviso de Entrega</label><br/>
+					<input name="sCdMaoPropria" type="checkbox" value="N">
+					<label>Mão Própria</label>
 				</div>
 			</div>
 		</fieldset>
@@ -91,4 +101,5 @@
 				Cadastro de Destinatários para o cliente que faz login
 
 				Disclaimer que não faz parte dos Correios
+				Check Translation in Placeholder Tags
 			-->
