@@ -10,7 +10,10 @@
 		<div class="box">
 		<h2 class="best">Calculador de Preço e Prazo</h2>
 		<form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
-			<input name="nCdServico" value="04162,04669" type="hidden">
+			<select name="nCdServico">
+				<option value="04162">SEDEX</option>
+				<option value="04669">PAC</option>
+			</select>
 		<fieldset><legend>Usuário</legend>
 			<div class="row">
 				<div class="cell">
