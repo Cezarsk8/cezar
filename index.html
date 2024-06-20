@@ -1,56 +1,262 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Cezar Sevilhano</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="icons/lamp.ico">
-    <link href="https://fonts.googleapis.com/css?family=Barlow|Cabin+Sketch|Merriweather&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="top">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cezar Sevilhano - Product Owner</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="icons/lamp.ico">
+  <!-- Linking Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header .container {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .middle-container {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .skills {
+      margin-bottom: 30px;
+    }
+
+    .skill-row {
+      margin-bottom: 15px;
+    }
+
+    .skill-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .skill-list {
+      list-style-type: circle;
+      margin-left: 20px;
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job h3 {
+      margin-bottom: 5px;
+    }
+
+    .job-date {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .education {
+      margin-bottom: 30px;
+    }
+
+    .education h2 {
+      margin-bottom: 10px;
+    }
+
+    .education-item {
+      margin-bottom: 15px;
+    }
+
+    .certifications {
+      margin-bottom: 30px;
+    }
+
+    .certifications h2 {
+      margin-bottom: 10px;
+    }
+
+    .certification-item {
+      margin-bottom: 15px;
+    }
+
+    footer .container {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer #disclaimer {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container">
       <h1>Cezar Sevilhano</h1>
-      <h2>Business Developer</h2>
+      <h2>Product Owner</h2>
     </div>
-    <div class="middle-container">
+  </header>
+  
+  <section class="middle-container">
+    <div class="container">
       <div class="profile">
-        <img id="photo" src="images/Cezar1.jpg" alt="Cezar">
-        <h2>Hello</h2>
-        <p id="bio">My name is Cezar. I do logistics, imports/exports and system development.</p>
+        <h2>Hello!</h2>
+        <p id="bio">I'm Cezar Sevilhano, a seasoned Product Owner with expertise in logistics, imports/exports, and software development.</p>
       </div>
+      
       <hr>
+      
       <div class="skills">
         <h2>My Skills</h2>
+        
         <div class="skill-row">
-          <img class="skill-img-left" src="icons/data.png" alt="Data">
-          <h3>Coding</h3>
-          <p>I have learned C Language, Python, Java, HTML and CSS and I am currently studying in FATEC São Paulo, Computer Science and Software Engineering.</p>
+          <h3 class="skill-title">Software Development</h3>
+          <ul class="skill-list">
+            <li>Proficient in C#, .NET, Python, Java, HTML, and CSS.</li>
+          </ul>
         </div>
+        
         <div class="skill-row">
-          <img class="skill-img-right" src="icons/shopping.png" alt="ecommerce">
-          <h3>Ecommerce Logistics</h3>
-          <p>I also have +10 years working experience as an account manager for the Brazillian Post Office, mainly with parcels and package corporate clients.</p>
-          <p>Right now I am working on this project: </p><a href="calc.html">Calculador de Preços e Prazos</a>
+          <h3 class="skill-title">Project Management</h3>
+          <ul class="skill-list">
+            <li>Experienced in Agile methodologies, JIRA, and managing cross-functional teams.</li>
+          </ul>
         </div>
+        
         <div class="skill-row">
-          <img class="skill-img-left" src="icons/money.png" alt="money">
-          <h3>Investing & Finances</h3>
-          <p>I do personal finance too! I can help you build your own equity portfolio with value investing mentality.</p>
+          <h3 class="skill-title">Ecommerce Logistics</h3>
+          <ul class="skill-list">
+            <li>Over 10 years of experience managing corporate client portfolios in logistics and ecommerce solutions.</li>
+            <li>Currently working on <a href="calc.html">Calculador de Preços e Prazos</a> project.</li>
+          </ul>
         </div>
+        
+        <div class="skill-row">
+          <h3 class="skill-title">Financial Analysis</h3>
+          <ul class="skill-list">
+            <li>Skilled in personal finance management and value investing.</li>
+          </ul>
+        </div>
+        
       </div>
+      
       <hr>
+      
+      <div class="experience">
+        <h2>Experience</h2>
+        
+        <div class="job">
+          <h3>Project Manager</h3>
+          <p class="job-date">January 2024 - Present</p>
+          <p class="job-description">Kestraa</p>
+          <ul>
+            <li>Managed foreign trade and SAP integration solutions.</li>
+            <li>Parametrized and implemented platform solutions.</li>
+            <li>Conducted customer process mapping and interface with sales and product teams.</li>
+          </ul>
+        </div>
+        
+        <div class="job">
+          <h3>Technical Product Owner</h3>
+          <p class="job-date">July 2021 – December 2023</p>
+          <p class="job-description">Sinerlog</p>
+          <ul>
+            <li>Led user story writing and API testing for integration.</li>
+            <li>Managed Kanban board in Jira and wrote documentation and release notes.</li>
+            <li>Collaborated with stakeholders for value-driven business deliveries and backlog planning.</li>
+          </ul>
+        </div>
+        
+        <div class="job">
+          <h3>International Business Development</h3>
+          <p class="job-date">July 2007 – June 2021</p>
+          <p class="job-description">Correios</p>
+          <ul>
+            <li>Developed import solutions and managed corporate customer portfolios.</li>
+            <li>Cooperated with tech teams on API testing and documentation.</li>
+            <li>Negotiated with airport and customs clearance teams to optimize cross-border operations.</li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <hr>
+      
+      <div class="education">
+        <h2>Education</h2>
+        
+        <div class="education-item">
+          <h3>Bachelor's Degree in History</h3>
+          <p class="job-date">2012</p>
+          <p class="job-description">Universidade de São Paulo</p>
+        </div>
+        
+        <div class="education-item">
+          <h3>Logistics MBA</h3>
+          <p class="job-date">2018</p>
+          <p class="job-description">Centro Universitário SENAC</p>
+        </div>
+        
+        <div class="education-item">
+          <h3>Bachelor's Degree in Computer Science</h3>
+          <p class="job-date">2018</p>
+          <p class="job-description">Faculdade Tecnologia de São Paulo</p>
+        </div>
+        
+      </div>
+      
+      <hr>
+      
+      <div class="certifications">
+        <h2>Courses & Certifications</h2>
+        
+        <div class="certification-item">
+          <h3>SAFe 6 Product Owner Course (Certification Pending)</h3>
+        </div>
+        
+      </div>
+      
+      <hr>
+      
       <div>
         <h2>Get In Touch</h2>
         <h3>Let me bring a new perspective to your company.</h3>
         <br>
       </div>
+      
     </div>
-    <div class="bottom-container">
-      <a class="footer-link" href="mailto:cezarsevilhano@gmail.com"><img id="icon" src="icons\email.png" alt="email"></a>
-      <a class="footer-link" href="https://www.linkedin.com/in/cezar-sevilhano-a1b08ba6/"><img id="icon" src="icons\linkedin.png" alt="linkedin"></a>
-      <p class="copyright">©2019 Cezar Sevilhano</p>
-      <div id="disclaimer">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a><a href="https://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  </section>
+  
+  <footer class="bottom-container">
+    <div class="container">
+      <a class="footer-link" href="mailto:cezarsevilhano@gmail.com"><img id="icon" src="icons/email.png" alt="Email"></a>
+      <a class="footer-link" href="https://www.linkedin.com/in/cezar-sevilhano-a1b08ba6/"><img id="icon" src="icons/linkedin.png" alt="LinkedIn"></a>
+      <p class="copyright">©2024 Cezar Sevilhano</p>
+      <div id="disclaimer">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </div>
-  </body>
-</html>
+ 
+
