@@ -1,109 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt">
-<meta charset="UTF-8">
-	<head>
-		<title>Calculador de Preço e Prazo</title>
-		<link href="css\sigep.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<div class="box">
-		<h2 class="best">Calculador de Preço e Prazo</h2>
-		<form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
-			<select name="nCdServico">
-				<option value="04162">SEDEX 04162</option>
-				<option value="04669">PAC 04669</option>
-			</select>
-		<fieldset><legend>Usuário</legend>
-			<div class="row">
-				<div class="cell">
-					<label>Código Administrativo</label><br/>
-					<input name="nCdEmpresa" maxlength="8" placeholder="Verificar ICC">
-				</div>
-				<div class="cell">
-					<label>Senha</label><br/>
-					<input name="sDsSenha" maxlength="8" placeholder="8 dígitos do CNPJ">
-				</div>
-			</div>
-		</fieldset>
-		<fieldset><legend>CEP</legend>
-			<div class="row">
-				<div class="cell">
-					<label>CEP de Origem</label><br/>
-					<input name="sCepOrigem" maxlength="8" placeholder="Sem espaço ou hífen">
-				</div>
-				<div class="cell">
-					<label>CEP de Destino</label><br/>
-					<input name="sCepDestino" maxlength="8" placeholder="Sem espaço ou hífen">
-				</div>
-			</div>
-		</fieldset>
-		<fieldset><legend>Dimensões</legend>
-			<div class="row">
-				<div class="cell">
-					<label>Peso</label><br/>
-					<input name="nVlPeso" placeholder="kg  (Mín: 0.1 Max: 30)">
-				</div>
-				<div class="cell">
-					<label>Comprimento</label><br/>
-					<input name="nVlComprimento" placeholder="cm  (Mín: 16 Max: 105)">
-				</div>
-			</div>
-			<div class="row">
-				<div class="cell">
-					<label>Altura</label><br/>
-					<input name="nVlAltura" placeholder="cm  (Mín: 2 Max: 105)">
-				</div>
-				<div class="cell">
-					<label>Largura</label><br/>
-					<input name="nVlLargura" placeholder="cm  (Mín: 11 Max: 105)">
-				</div>
-			</div>
-			<div class="row">
-				<div class="cell">
-					<label>Formato</label><br/>
-					<select name="nCdFormato">
-						<option value="1">Caixa</option>
-						<option value="2">Rolo</option>
-						<option value="3">Envelope</option>
-					</select><br/>
-				</div>
-				<div class="cell">
-					<label>Diâmetro</label><br/>
-					<input name="nVlDiametro" placeholder="cm  (Formato Rolo)" value="0">
-				</div>
-			</div>
-		</fieldset>
-		<fieldset><legend>Serviços Adicionais</legend>
-			<div class="row">
-				<div class="cell">
-					<label>Valor Declarado</label><br/>
-					<input name="nVlValorDeclarado" placeholder="R$ (Máx 10.000)" value="0"></br>
-				</div>
-				<div class="cell"><br/>
-					<input name="sCdAvisoRecebimento" type="checkbox" value="S">
-					<label>Aviso de Entrega</label><br/>
-					<input name="sCdMaoPropria" type="checkbox" value="S">
-					<label>Mão Própria</label>
-				</div>
-			</div>
-		</fieldset>
-			<input type="submit" value="Pesquisar">
-		</div>
-		<form action="http://ws.correios.com.br/calculador/popuptarifa.aspx" method="get">
-		<input name="StrRetorno" value="http://ws.correios.com.br/calculador/popuptarifa.aspx" type="hidden">
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculador de Preço e Prazo</title>
+    <link href="css/sigep.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cell {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2 class="best">Calculador de Preço e Prazo</h2>
+    <form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
+        <fieldset>
+            <legend>Opções de Serviço</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Serviço:</label><br/>
+                    <select name="nCdServico">
+                        <option value="04162">SEDEX 04162</option>
+                        <option value="04669">PAC 04669</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados de Acesso</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Código Administrativo:</label><br/>
+                    <input type="text" name="nCdEmpresa" maxlength="8" placeholder="Verificar ICC">
+                </div>
+                <div class="cell">
+                    <label>Senha:</label><br/>
+                    <input type="password" name="sDsSenha" maxlength="8" placeholder="8 dígitos do CNPJ">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>CEP de Origem e Destino</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>CEP de Origem:</label><br/>
+                    <input type="text" name="sCepOrigem" maxlength="8" placeholder="Sem espaço ou hífen">
+                </div>
+                <div class="cell">
+                    <label>CEP de Destino:</label><br/>
+                    <input type="text" name="sCepDestino" maxlength="8" placeholder="Sem espaço ou hífen">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dimensões e Peso</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Peso (kg):</label><br/>
+                    <input type="number" name="nVlPeso" placeholder="Mín: 0.1 Max: 30" step="0.1">
+                </div>
+                <div class="cell">
+                    <label>Comprimento (cm):</label><br/>
+                    <input type="number" name="nVlComprimento" placeholder="Mín: 16 Max: 105">
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <label>Altura (cm):</label><br/>
+                    <input type="number" name="nVlAltura" placeholder="Mín: 2 Max: 105">
+                </div>
+                <div class="cell">
+                    <label>Largura (cm):</label><br/>
+                    <input type="number" name="nVlLargura" placeholder="Mín: 11 Max: 105">
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <label>Formato:</label><br/>
+                    <select name="nCdFormato">
+                        <option value="1">Caixa</option>
+                        <option value="2">Rolo</option>
+                        <option value="3">Envelope</option>
+                    </select>
+                </div>
+                <div class="cell">
+                    <label>Diâmetro (cm):</label><br/>
+                    <input type="number" name="nVlDiametro" placeholder="Formato Rolo" value="0">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Serviços Adicionais</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Valor Declarado (R$):</label><br/>
+                    <input type="number" name="nVlValorDeclarado" placeholder="Máx 10.000">
+                </div>
+                <div class="cell">
+                    <br/>
+                    <input type="checkbox" name="sCdAvisoRecebimento" value="S">
+                    <label>Aviso de Recebimento</label><br/>
+                    <input type="checkbox" name="sCdMaoPropria" value="S">
+                    <label>Mão Própria</label>
+                </div>
+            </div>
+        </fieldset>
+        <input type="submit" value="Pesquisar">
+    </form>
+    <div class="disclaimer">
+        <p>Este serviço é fornecido pelos Correios. Qualquer problema deve ser tratado diretamente com eles.</p>
+    </div>
+</div>
+</body>
 </html>
-			<!--
-				Retorno em XML
-				<input name="StrRetorno" value="XML" target="_blank" type="hidden">
-				<input value="Consultar" type="submit">
-
-				Adicionar campo "Data da Postagem" para averiguação de prazo
-
-				Cadastro de Destinatários para o cliente que faz login
-
-				Disclaimer que não faz parte dos Correios
-				Check Translation in Placeholder Tags
-				Realizar comparativo com preços do à vista
-			-->
