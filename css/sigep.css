@@ -1,94 +1,201 @@
-html, body {
-	font-family: Calibri, sans-serif;
-}
-.best{
-	font-size: 25px;
-	text-shadow: 1px 1px #ccc;
-}
-.box {
-	margin: auto;
-	width: 370px;
-	font-size: 10pt;
-	text-align: center;
-	line-height: 12pt;
-	background: #ffe866;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 0px 10px 0px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-fieldset{
-	display:table;
-	width: 100%;
-	text-align: left;
-	box-sizing: border-box;
-}
-.row {
-  display: table-row;
-}
-.cell {
-  display: table-cell;
-  padding: 4px;
-}
-label{
-	font-size: 12pt;
-	font-weight: bold;
-}
-input{
-	width:140px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 8px 12px;
-	font-style: italic;
-}
-input:hover{
-	width:140px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 8px 12px;
-	font-style: italic;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-    transition: all 200ms ease-out;
-}
-select{
-	width: 150px;
-	border: 1px solid #ccc;
-    border-radius: 4px;
-	padding: 8px 8px;
-	font-style: italic;
-}
-input[type=checkbox]{
-	width: 18px;
-	height: 12px;
-}
-input[type=submit] {
-    width: 40%;
-	height: 40px;
-    background-color: DodgerBlue;
-	margin-top: 10px;
-	margin-bottom:10px;
-    padding: 10px 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 8px 12px;
-	font-family: Calibri;
-	color: white;
-	font-size: 15pt;
-	font-style: normal;
-	font-weight: bold;
-}
-input[type=submit]:hover {
-    width: 40%;
-	height: 40px;
-    background-color: DeepSkyBlue ;
-	margin-top: 10px;
-    padding: 10px 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 8px 12px;
-	font-family: Calibri;
-	color: white;
-	font-size: 15pt;
-	font-style: normal;
-	font-weight: bold;
-}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculador de Preço e Prazo</title>
+    <link href="css/sigep.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cell {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .disclaimer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2 class="best">Calculador de Preço e Prazo</h2>
+    <form action="http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx" method="get">
+        <fieldset>
+            <legend>Opções de Serviço</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Serviço:</label><br/>
+                    <select name="nCdServico">
+                        <option value="04162">SEDEX 04162</option>
+                        <option value="04669">PAC 04669</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados de Acesso</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Código Administrativo:</label><br/>
+                    <input type="text" name="nCdEmpresa" maxlength="8" placeholder="Verificar ICC">
+                </div>
+                <div class="cell">
+                    <label>Senha:</label><br/>
+                    <input type="password" name="sDsSenha" maxlength="8" placeholder="8 dígitos do CNPJ">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>CEP de Origem e Destino</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>CEP de Origem:</label><br/>
+                    <input type="text" name="sCepOrigem" maxlength="8" placeholder="Sem espaço ou hífen">
+                </div>
+                <div class="cell">
+                    <label>CEP de Destino:</label><br/>
+                    <input type="text" name="sCepDestino" maxlength="8" placeholder="Sem espaço ou hífen">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dimensões e Peso</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Peso (kg):</label><br/>
+                    <input type="number" name="nVlPeso" placeholder="Mín: 0.1 Max: 30" step="0.1">
+                </div>
+                <div class="cell">
+                    <label>Comprimento (cm):</label><br/>
+                    <input type="number" name="nVlComprimento" placeholder="Mín: 16 Max: 105">
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <label>Altura (cm):</label><br/>
+                    <input type="number" name="nVlAltura" placeholder="Mín: 2 Max: 105">
+                </div>
+                <div class="cell">
+                    <label>Largura (cm):</label><br/>
+                    <input type="number" name="nVlLargura" placeholder="Mín: 11 Max: 105">
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <label>Formato:</label><br/>
+                    <select name="nCdFormato">
+                        <option value="1">Caixa</option>
+                        <option value="2">Rolo</option>
+                        <option value="3">Envelope</option>
+                    </select>
+                </div>
+                <div class="cell">
+                    <label>Diâmetro (cm):</label><br/>
+                    <input type="number" name="nVlDiametro" placeholder="Formato Rolo" value="0">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Serviços Adicionais</legend>
+            <div class="row">
+                <div class="cell">
+                    <label>Valor Declarado (R$):</label><br/>
+                    <input type="number" name="nVlValorDeclarado" placeholder="Máx 10.000">
+                </div>
+                <div class="cell">
+                    <br/>
+                    <input type="checkbox" name="sCdAvisoRecebimento" value="S">
+                    <label>Aviso de Recebimento</label><br/>
+                    <input type="checkbox" name="sCdMaoPropria" value="S">
+                    <label>Mão Própria</label>
+                </div>
+            </div>
+        </fieldset>
+        <input type="submit" value="Pesquisar">
+    </form>
+    <div class="disclaimer">
+        <p>Este serviço é fornecido pelos Correios. Qualquer problema deve ser tratado diretamente com eles.</p>
+    </div>
+</div>
+</body>
+</html>
