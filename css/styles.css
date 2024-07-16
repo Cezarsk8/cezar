@@ -1,134 +1,90 @@
 /*----TAG----*/
 
-a{
-  color:#11999E;
-  font-family: 'Merriweather', serif;
+a {
+  color: #007bff;
+  font-family: 'Open Sans', sans-serif;
   margin: 10px 20px;
   text-decoration: none;
 }
 
 body {
-  color: #40514E;
-  font-family: 'Merriweather', serif;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   text-align: center;
 }
 
 h1 {
-  color: #66BFBF;
-  font-size: 5.625rem;
+  color: #343a40;
+  font-size: 4rem;
   margin: 50px auto 0 auto;
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
-  color: #66BFBF;
-  font-family: 'Barlow', sans-serif;
-  font-size: 2.5rem;
-  font-weight: normal;
+  color: #6c757d;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
   padding-bottom: 10px;
 }
 
 h3 {
-  color: #11999E;
-  font-family: 'Barlow', sans-serif;
-}
-
-img {
-  margin-top: 50px;
+  color: #007bff;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p {
-  line-height: 2;
+  line-height: 1.6;
 }
 
 hr {
-  border: dotted #EAF6F6 6px;
-  border-bottom: none;
-  width: 4%;
-  margin: 100px auto;
+  border: solid #dee2e6 1px;
+  width: 50%;
+  margin: 40px auto;
 }
 
 /*----CLASS----*/
 
 .copyright {
-  color: #EAF6F6;
-  font-size: 0.75rem;
+  color: #adb5bd;
+  font-size: 0.875rem;
 }
 
 .top {
-  background-color: #E4f9f5;
-  padding-top: 100px;
+  background-color: #f8f9fa;
+  padding-top: 50px;
   position: relative;
 }
 
-.middle-container{
-  margin-left: 100px 0;
+.middle-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.bottom-container{
-  background-color: #66BFBF;
+.bottom-container {
+  background-color: #f8f9fa;
 }
 
-.skill-row{
+.skill-row {
   line-height: 2;
-  margin: 100px auto 100px auto;
+  margin: 30px auto;
   text-align: left;
-  width: 50%;
+  width: 70%;
 }
 
-.skill-img-left{
-  float:left;
+.skill-img-left {
+  float: left;
   margin: 30px 30px 30px auto;
 }
 
-.skill-img-right{
-  float:right;
+.skill-img-right {
+  float: right;
   margin: 30px auto 30px 30px;
 }
 
 /*----ID----*/
-
-#bio{
-  width: 30%;
-  margin: auto;
-}
-
-#contact{
-  width: 40%;
-  margin: 40px auto 60px;
-}
-
-#bottom-cloud {
-  bottom: 300px;
-  left: 250px;
-  position: absolute;
-  width: 200px;
-}
-
-#disclaimer {
-  font-size: 0.5rem;
-}
-
-#icon {
-  height: 5rem;
-  width: auto;
-}
-
-#top-cloud {
-  position: absolute;
-  right: 300px;
-  top: 40px;
-  width: 10%
-}
-
-#mountain {
-  height: auto;
-  width: 50%;
-}
-
-#photo {
-  border-radius: 100%;
-  height: auto;
-  width: 200px;
-}
