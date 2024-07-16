@@ -58,12 +58,21 @@ hr {
   position: relative;
 }
 
+/* Container styles */
+.container {
+  max-width: 1200px; /* Increase this value for a wider layout */
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+}
+
+/* Middle container styles */
 .middle-container {
   background-color: #ffffff;
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Match the max-width of the container */
 }
 
 .bottom-container {
@@ -74,7 +83,7 @@ hr {
   line-height: 2;
   margin: 30px auto;
   text-align: left;
-  width: 70%;
+  width: 100%; /* Ensure this spans the full width */
 }
 
 .skill-img-left {
