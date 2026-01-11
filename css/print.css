@@ -1,0 +1,112 @@
+/* Print Stylesheet - Portfolio Website */
+
+@media print {
+  /* Hide non-essential elements */
+  .scroll-indicator,
+  .hero__cta-group,
+  .contact-form,
+  .social-links,
+  footer,
+  .project-card__links,
+  nav {
+    display: none !important;
+  }
+
+  /* Reset colors for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Remove shadows and backgrounds */
+  .hero,
+  .project-card,
+  .skill-item,
+  .timeline__item,
+  .contact {
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  /* Ensure text is readable */
+  h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  p, li {
+    color: #333 !important;
+  }
+
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript"]:after {
+    content: "";
+  }
+
+  /* Page breaks */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+
+  .hero__headshot {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  /* Projects grid - single column */
+  .projects-grid {
+    display: block !important;
+  }
+
+  .project-card {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+  }
+
+  .project-card__image {
+    display: none;
+  }
+
+  /* Timeline - simplified */
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline__item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Skills - simplified */
+  .skill-bar {
+    display: none;
+  }
+
+  .skill-item__tags {
+    display: block;
+  }
+}
