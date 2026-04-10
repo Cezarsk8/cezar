@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cezar Sevilhano - Resume 2026-04</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a2e;
+      --text-light: #4a4a5a;
+      --accent: #2563eb;
+      --border: #d1d5db;
+      --bg: #ffffff;
+      --section-gap: 1.1rem;
+    }
+
+    @page {
+      margin: 0.55in 0.6in;
+      size: letter;
+    }
+
+    body {
+      font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+      font-size: 10pt;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in 0.6in;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== HEADER ===== */
+    .header { text-align: center; margin-bottom: var(--section-gap); }
+
+    .header__name {
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.2rem;
+    }
+
+    .header__contact {
+      font-size: 9pt;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .header__contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .header__contact .sep { margin: 0 0.3rem; }
+
+    /* ===== SECTIONS ===== */
+    .section { margin-bottom: var(--section-gap); }
+
+    .section__title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      font-size: 9.5pt;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .job { margin-bottom: 0.8rem; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .job__title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .job__company {
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .job__date {
+      font-size: 9pt;
+      color: var(--text-light);
+      white-space: nowrap;
+    }
+
+    .job__location {
+      font-size: 8.5pt;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 0.25rem;
+    }
+
+    .job__area-title {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.35rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .job__list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .job__list li {
+      font-size: 9.5pt;
+      color: var(--text-light);
+      padding-left: 0.9rem;
+      position: relative;
+      margin-bottom: 0.12rem;
+      line-height: 1.45;
+    }
+
+    .job__list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+    }
+
+    .job__sub {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .job__tech {
+      font-size: 8.5pt;
+      color: var(--text-light);
+      margin-top: 0.2rem;
+    }
+
+    .job__tech strong { color: var(--text); font-weight: 600; }
+
+    /* ===== PERSONAL PROJECTS ===== */
+    .project { margin-bottom: 0.45rem; }
+    .project:last-child { margin-bottom: 0; }
+
+    .project__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+
+    .project__name {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .project__status {
+      font-size: 8pt;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .project__desc {
+      font-size: 9pt;
+      color: var(--text-light);
+      margin-bottom: 0.1rem;
+    }
+
+    .project__tech {
+      font-size: 8.5pt;
+      color: var(--text-light);
+    }
+
+    /* ===== EDUCATION ===== */
+    .edu { margin-bottom: 0.25rem; }
+
+    .edu__line {
+      font-size: 9.5pt;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .edu__degree { font-weight: 600; color: var(--text); }
+    .edu__school { color: var(--text-light); }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15rem 2rem;
+    }
+
+    .skill-line {
+      font-size: 9pt;
+      color: var(--text-light);
+    }
+
+    .skill-line strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ===== CERTS ===== */
+    .cert {
+      font-size: 9pt;
+      color: var(--text-light);
+      margin-bottom: 0.1rem;
+    }
+
+    .cert strong { color: var(--text); font-weight: 600; }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body { padding: 0; }
+      .section { break-inside: avoid; }
+      .job { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="header__name">Cezar Sevilhano</h1>
+    <div class="header__contact">
+      São Paulo, Brazil<span class="sep">|</span>+55 (11) 98294-0745<span class="sep">|</span><a href="mailto:cezarsevilhano@gmail.com">cezarsevilhano@gmail.com</a>
+      <br>
+      <a href="https://www.linkedin.com/in/cezar-sevilhano-a1b08ba6/">linkedin.com/in/cezar-sevilhano</a><span class="sep">|</span><a href="https://cezarsk8.github.io/cezar/">cezarsk8.github.io/cezar</a><span class="sep">|</span><a href="https://github.com/cezarsk8">github.com/cezarsk8</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2 class="section__title">About Me</h2>
+    <p class="about">
+      Engineering & Support Manager with 17+ years bridging business strategy and technical execution. Currently leading a microservices ecosystem of 20+ repositories at RAZAC, covering architecture, CI/CD, production support, and AI innovation. Background spans international logistics (Correios), cross-border eCommerce (Sinerlog), SAP integration (Kestraa), and hands-on full-stack development with live personal projects in production. Focused on scalable .NET systems, observability-driven operations, and integrating generative AI into engineering workflows.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <h2 class="section__title">Professional Experience</h2>
+
+    <!-- RAZAC -->
+    <div class="job">
+      <div class="job__header">
+        <span class="job__title">Engineering & Support Manager <span class="job__company">| RAZAC</span></span>
+        <span class="job__date">Nov 2024 &ndash; Present</span>
+      </div>
+      <div class="job__location">São Paulo, Brazil &middot; Hybrid</div>
+
+      <div class="job__area-title">Engineering & Architecture</div>
+      <ul class="job__list">
+        <li>Manage 20+ repositories in Azure DevOps organized by domain (Core, Cadastros, Integrations, Financial, Processes, AI)</li>
+        <li>Define and maintain shared libraries via internal NuGet feed (razac-libs), ensuring consistency across microservices</li>
+        <li>Architect systems on .NET 8, Oracle (Dapper/ODP.NET), MongoDB, RabbitMQ, Docker, API Gateway, and Identity Server</li>
+        <li>Implement CI/CD with Azure Pipelines including automated NuGet publishing with change detection</li>
+        <li>Enforce code quality standards with SonarQube static analysis and quality gates</li>
+      </ul>
+
+      <div class="job__area-title">Product & Development</div>
+      <ul class="job__list">
+        <li>Collaborate with PO on refinements: epic breakdown, user stories, acceptance criteria, and test scenarios</li>
+        <li>Manage roadmap in Jira: epics, stories, estimates, prioritization, and cost analysis for financial visibility</li>
+        <li>Lead technical development of Tax Analysis MVP &mdash; .NET backend + Railway frontend + LLM integration</li>
+      </ul>
+
+      <div class="job__area-title">Support & Operations</div>
+      <ul class="job__list">
+        <li>Manage bug and incident backlog (Jira project TEC) with structured triage and resolution workflows</li>
+        <li>Investigate production failures using Loki (logs), Grafana (dashboards), RabbitMQ, Oracle, and MongoDB</li>
+        <li>Build support knowledge base for faster diagnosis and client response times</li>
+        <li>Monitor service health via Consul and Portainer</li>
+      </ul>
+
+      <div class="job__area-title">AI Innovation</div>
+      <ul class="job__list">
+        <li>Adopt generative AI in daily engineering (Claude Code with MCPs integrated to Jira, Loki, Grafana, RabbitMQ, Oracle, MongoDB, Azure DevOps)</li>
+        <li>Develop and deploy AI-powered MVPs on Railway</li>
+      </ul>
+
+      <div class="job__sub">Key Projects:</div>
+      <ul class="job__list">
+        <li><strong>IDA Freight Quotes</strong> &ndash; AI-powered agent automating freight quote sourcing across multiple providers</li>
+        <li><strong>RAZAC Workspace</strong> &ndash; Workflow automation and business metrics dashboard</li>
+        <li><strong>Tax Analysis MVP</strong> &ndash; LLM-integrated fiscal analysis tool for operational workflows</li>
+      </ul>
+
+      <div class="job__tech"><strong>Tech:</strong> .NET 8, Oracle, MongoDB, RabbitMQ, Docker, Azure DevOps, Azure Pipelines, Grafana, Loki, SonarQube, Consul, Jira, Identity Server</div>
+    </div>
+
+    <!-- KESTRAA -->
+    <div class="job">
+      <div class="job__header">
+        <span class="job__title">Project Manager <span class="job__company">| Kestraa</span></span>
+        <span class="job__date">Jan 2024 &ndash; Sep 2024</span>
+      </div>
+      <div class="job__location">São Paulo, Brazil &middot; Hybrid</div>
+      <ul class="job__list">
+        <li>Deployed Kestraa solution in major agribusiness multinational; managed 2 ongoing industrial customer projects</li>
+        <li>Managed foreign trade and SAP MM module integration (ME21N, J1B1N, FB60)</li>
+        <li>Conducted customer process mapping, parametrized platform solutions, and coordinated with sales/product teams</li>
+        <li>Handled import processes for container and bulk cargo in foreign trade operations</li>
+      </ul>
+      <div class="job__tech"><strong>Tech:</strong> SAP MM, monday.com, SAAS deployment</div>
+    </div>
+
+    <!-- SINERLOG -->
+    <div class="job">
+      <div class="job__header">
+        <span class="job__title">Technical Product Owner <span class="job__company">| Sinerlog</span></span>
+        <span class="job__date">Jul 2021 &ndash; Dec 2023</span>
+      </div>
+      <div class="job__location">São Paulo, Brazil &middot; On-site</div>
+      <ul class="job__list">
+        <li>Wrote user stories, conducted API testing, managed Kanban board in Jira, and created documentation and release notes</li>
+        <li>Conducted stakeholder discovery and planned backlog aligned with strategic business objectives</li>
+        <li>Implemented Brazil's Remessa Conforme program &mdash; clearing hundreds of international parcels through the federal tax benefit for couriers</li>
+      </ul>
+      <div class="job__sub">Key Projects:</div>
+      <ul class="job__list">
+        <li><strong>e-Invoice</strong> &ndash; International invoice system for cross-border retail (SGS integration)</li>
+        <li><strong>CrossCommerce Platform</strong> &ndash; API suite for catalog, orders, invoices, shipping, and taxes</li>
+        <li><strong>Global Tracking</strong> &ndash; Multi-carrier parcel tracking platform consolidating origin-to-buyer data</li>
+        <li><strong>Sinerlog Courier</strong> &ndash; Customs clearance app integrated with Brazil's SISCOMEX</li>
+        <li><strong>Remessa Conforme</strong> &ndash; Federal tax compliance program for cross-border courier operations</li>
+      </ul>
+      <div class="job__tech"><strong>Tech:</strong> C# .NET, PostgreSQL, MySQL, Cypress, Jira, Postman</div>
+    </div>
+
+    <!-- CORREIOS -->
+    <div class="job">
+      <div class="job__header">
+        <span class="job__title">Technical Account Manager &amp; Business Dev <span class="job__company">| Correios</span></span>
+        <span class="job__date">Jul 2007 &ndash; Jun 2021</span>
+      </div>
+      <div class="job__location">São Paulo, Brazil</div>
+      <ul class="job__list">
+        <li>14 years across 3 roles: Postal Worker (2007-2013) &rarr; Sales (2013-2020) &rarr; Cross-Border Business Dev (2020-2021)</li>
+        <li>Key participant in major cross-border e-commerce projects: Cainiao (Alibaba), Shopee (Sea Group), and Encaminhei.com</li>
+        <li>Technical account manager for Cainiao &mdash; managed integration, delivery SLA, and API support</li>
+        <li>Helped implement Shopee's cross-border operation in Brazil, including tracking system integration</li>
+        <li>Led self pick-up project with Encaminhei.com for last-mile delivery optimization</li>
+        <li>Developed Correios PACKET import solution and JSON API documentation for tech team</li>
+        <li>Managed 300+ client portfolio, delivery SLA monitoring, and API integration maintenance</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PERSONAL PROJECTS -->
+  <section class="section">
+    <h2 class="section__title">Personal Projects</h2>
+
+    <div class="project">
+      <div class="project__header">
+        <span class="project__name">Listo &ndash; Price Research App</span>
+        <span class="project__status">Live &middot; mylistoapp.com</span>
+      </div>
+      <div class="project__desc">Receipt OCR, price history tracking, cross-store comparison, pantry management</div>
+      <div class="project__tech"><strong>Tech:</strong> .NET 9, Next.js 15, TypeScript, Tailwind CSS, PostgreSQL</div>
+    </div>
+
+    <div class="project">
+      <div class="project__header">
+        <span class="project__name">InCasa Fitness &ndash; Gym Management</span>
+        <span class="project__status">Live &middot; incasagym.com</span>
+      </div>
+      <div class="project__desc">Workout management, progress tracking, supplement analytics, AI-powered exercise descriptions</div>
+      <div class="project__tech"><strong>Tech:</strong> .NET 8, Next.js 15, TypeScript, Tailwind CSS, PostgreSQL, AI</div>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <h2 class="section__title">Education</h2>
+
+    <div class="edu">
+      <div class="edu__line">
+        <span><span class="edu__degree">Computer Systems Analysis</span> <span class="edu__school">&ndash; FATEC-SP (Technology Degree)</span></span>
+        <span class="edu__school">2018 &ndash; 2022</span>
+      </div>
+    </div>
+
+    <div class="edu">
+      <div class="edu__line">
+        <span><span class="edu__degree">Logistics & Supply Chain MBA</span> <span class="edu__school">&ndash; Centro Universitário SENAC</span></span>
+        <span class="edu__school">2017 &ndash; 2018</span>
+      </div>
+    </div>
+
+    <div class="edu">
+      <div class="edu__line">
+        <span><span class="edu__degree">Bachelor's in History</span> <span class="edu__school">&ndash; Universidade de São Paulo (USP)</span></span>
+        <span class="edu__school">2012</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section">
+    <h2 class="section__title">Certifications</h2>
+    <div class="cert"><strong>AI Workshop &ndash; Applied AI for Business</strong> &middot; CI&T &middot; 2025</div>
+    <div class="cert"><strong>SAP S4HANA</strong> &middot; Udemy &middot; 2024</div>
+    <div class="cert"><strong>SAFe 6 Product Owner</strong> &middot; Certification Pending</div>
+    <div class="cert"><strong>Agile Project Management & Product Ownership</strong></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <h2 class="section__title">Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-line"><strong>Backend:</strong> .NET 8/9, C#, REST APIs, Clean Architecture, CQRS</div>
+      <div class="skill-line"><strong>Frontend:</strong> Next.js 15, React, TypeScript, Tailwind CSS</div>
+      <div class="skill-line"><strong>Databases:</strong> Oracle (Dapper/ODP.NET), PostgreSQL, MongoDB, MySQL</div>
+      <div class="skill-line"><strong>Messaging:</strong> RabbitMQ</div>
+      <div class="skill-line"><strong>DevOps:</strong> Azure DevOps, Azure Pipelines, Docker, SonarQube</div>
+      <div class="skill-line"><strong>Observability:</strong> Grafana, Loki, Consul, Portainer</div>
+      <div class="skill-line"><strong>Management:</strong> Jira, Kanban, Scrum, SAFe, User Stories</div>
+      <div class="skill-line"><strong>AI:</strong> Claude Code, MCP integrations, LLM workflows</div>
+    </div>
+  </section>
+
+</body>
+</html>

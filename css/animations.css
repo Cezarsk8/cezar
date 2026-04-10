@@ -1,29 +1,14 @@
-/* Animations CSS - Portfolio Website Revamp */
+/* ============================================================
+   ANIMATIONS — Midnight Architect
+   Orchestrated reveals, scroll triggers, micro-interactions
+   ============================================================ */
 
-/* Typing Animation for Hero */
-.typing-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid white;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
-}
-
-/* Fade In Animation */
+/* ========== FADE IN (scroll-triggered) ========== */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in.visible {
@@ -31,11 +16,12 @@
   transform: translateY(0);
 }
 
-/* Slide In Left */
+/* ========== SLIDE IN ========== */
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateX(-40px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-in-left.visible {
@@ -43,11 +29,11 @@
   transform: translateX(0);
 }
 
-/* Slide In Right */
 .slide-in-right {
   opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateX(40px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-in-right.visible {
@@ -55,11 +41,12 @@
   transform: translateX(0);
 }
 
-/* Scale In */
+/* ========== SCALE IN ========== */
 .scale-in {
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: scale(0.92);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scale-in.visible {
@@ -67,61 +54,22 @@
   transform: scale(1);
 }
 
-/* Skill Bar Animation */
-.skill-bar-fill {
-  width: 0;
-  transition: width 1s ease-out;
-}
+/* ========== STAGGER DELAYS ========== */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+.stagger-5 { transition-delay: 0.25s; }
+.stagger-6 { transition-delay: 0.3s; }
+.stagger-7 { transition-delay: 0.35s; }
+.stagger-8 { transition-delay: 0.4s; }
 
-.skill-bar-fill.animate {
-  width: var(--skill-width, 0);
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-/* Hover Effects - Disabled on Touch */
-@media (hover: hover) {
-  .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-card:hover .project-card__image img {
-    transform: scale(1.05);
-  }
-}
-
-/* Stagger Animation Delays */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-
-/* Timeline Animation */
+/* ========== TIMELINE ITEMS ========== */
 .timeline__item {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .timeline__item.visible {
@@ -129,35 +77,66 @@
   transform: translateY(0);
 }
 
-/* Button Pulse */
-.btn-pulse {
-  animation: pulse 2s infinite;
+/* ========== SKILL BAR FILL ========== */
+.skill-bar-fill {
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
-  }
+.skill-bar-fill.animate {
+  width: var(--skill-width, 0);
 }
 
-/* Loading Spinner */
+/* ========== HERO COUNTER ANIMATION ========== */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== LOADING SPINNER ========== */
 .spinner {
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(10, 14, 26, 0.2);
+  border-top-color: var(--bg-primary, #0a0e1a);
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+  animation: spin 0.7s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
+  to { transform: rotate(360deg); }
+}
+
+/* ========== HOVER CARD GLOW ========== */
+@keyframes subtle-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.05); }
+  50% { box-shadow: 0 0 40px rgba(34, 211, 238, 0.1); }
+}
+
+/* ========== AREA TOGGLE ANIMATION ========== */
+.timeline__area-content {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in,
+  .timeline__item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .skill-bar-fill {
+    transition: none;
+  }
+
+  .skill-bar-fill.animate {
+    width: var(--skill-width, 0);
   }
 }

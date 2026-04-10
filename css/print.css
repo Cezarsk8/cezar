@@ -1,46 +1,79 @@
-/* Print Stylesheet - Portfolio Website */
+/* Print Stylesheet — Midnight Architect */
 
 @media print {
   /* Hide non-essential elements */
   .scroll-indicator,
   .hero__cta-group,
+  .hero__badge,
+  .hero__grid-bg,
+  .hero__gradient-orb,
+  .floating-nav,
   .contact-form,
   .social-links,
-  footer,
   .project-card__links,
+  .compact-card__status,
+  footer,
   nav {
     display: none !important;
   }
 
-  /* Reset colors for print */
+  /* Reset dark theme for print */
+  :root {
+    --bg-primary: #fff;
+    --bg-secondary: #fff;
+    --bg-card: #fff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #444;
+    --text-tertiary: #666;
+    --accent-cyan: #2563eb;
+    --border: #ddd;
+  }
+
   body {
     background: white !important;
-    color: black !important;
-    font-size: 12pt;
+    color: #1a1a1a !important;
+    font-size: 11pt;
     line-height: 1.5;
   }
 
-  /* Remove shadows and backgrounds */
+  /* Remove shadows and dark backgrounds */
   .hero,
-  .project-card,
-  .skill-item,
-  .timeline__item,
-  .contact {
-    box-shadow: none !important;
+  .projects,
+  .skills-section,
+  .timeline-section,
+  .education-section,
+  .contact-section {
     background: white !important;
+    padding: 1rem 0 !important;
   }
 
-  /* Ensure text is readable */
-  h1, h2, h3, h4, h5, h6 {
-    color: black !important;
+  .project-card,
+  .compact-card,
+  .skill-item,
+  .timeline__card,
+  .education-card {
+    box-shadow: none !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4 {
+    color: #1a1a1a !important;
     page-break-after: avoid;
   }
 
   p, li {
-    color: #333 !important;
+    color: #444 !important;
   }
 
-  /* Show URLs for links */
+  .section-label {
+    background: none !important;
+    border: 1px solid #ddd !important;
+    color: #2563eb !important;
+  }
+
+  /* Show URLs */
   a[href]:after {
     content: " (" attr(href) ")";
     font-size: 0.8em;
@@ -52,42 +85,36 @@
     content: "";
   }
 
-  /* Page breaks */
-  .section {
-    page-break-inside: avoid;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  /* Hero section adjustments */
+  /* Hero */
   .hero {
     min-height: auto !important;
-    padding: 2rem 0 !important;
+    padding: 1rem 0 !important;
   }
 
   .hero__headshot {
-    width: 100px !important;
-    height: 100px !important;
+    width: 80px !important;
+    height: 80px !important;
+    border: 2px solid #ddd !important;
+    box-shadow: none !important;
   }
 
-  /* Projects grid - single column */
-  .projects-grid {
+  /* Projects - single column */
+  .projects-grid,
+  .projects-compact-grid {
     display: block !important;
   }
 
-  .project-card {
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    padding: 1rem;
+  .project-card,
+  .compact-card {
+    margin-bottom: 0.75rem;
+    page-break-inside: avoid;
   }
 
   .project-card__image {
     display: none;
   }
 
-  /* Timeline - simplified */
+  /* Timeline */
   .timeline::before {
     display: none;
   }
@@ -95,18 +122,45 @@
   .timeline__item {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    text-align: left !important;
+    width: 100% !important;
+    margin-left: 0 !important;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
-  /* Skills - simplified */
+  .timeline__item::before {
+    display: none;
+  }
+
+  .timeline__area-content {
+    display: block !important;
+  }
+
+  /* Skills */
   .skill-bar {
     display: none;
   }
 
-  .skill-item__tags {
-    display: block;
+  .skills-grid,
+  .education-grid {
+    display: block !important;
+  }
+
+  .skill-item,
+  .education-card {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Page breaks */
+  section {
+    page-break-inside: avoid;
+  }
+
+  .tech-badge,
+  .skill-tag {
+    background: none !important;
+    border: 1px solid #ccc !important;
+    color: #444 !important;
   }
 }

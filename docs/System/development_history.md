@@ -91,6 +91,61 @@ Complete portfolio website revamp implementing US002. Added Projects section sho
 
 ---
 
+## Version 2.0.0 - Professional Profile Update & Design Refresh (2026-04-09)
+
+### Summary
+Complete redesign implementing US003. New "Midnight Architect" dark theme, expanded RAZAC experience with 4 collapsible areas, updated Correios/Sinerlog with cross-border details, skills refresh, and updated resume.
+
+### Changes
+
+#### Design System — "Midnight Architect"
+- ✅ New dark palette: deep navy (#0a0e1a) base, electric cyan (#22d3ee) accents, amber highlights
+- ✅ New typography: Sora (headings), DM Sans (body), JetBrains Mono (tags/code)
+- ✅ Grid-pattern hero background with floating gradient orbs
+- ✅ Subtle glow effects on interactive elements
+
+#### HTML Structure
+- ✅ Floating side navigation with active section tracking (Intersection Observer)
+- ✅ Hero: availability badge, count-up animated metrics, mouse scroll indicator
+- ✅ RAZAC: 4 expandable areas (Engineering, Product, Support, AI Innovation) with accordion toggles
+- ✅ Correios: expanded with Cainiao, Shopee, Encaminhei.com cross-border projects
+- ✅ Sinerlog: added Remessa Conforme federal tax compliance program
+- ✅ Updated all meta tags, OG tags, JSON-LD (jobTitle → Engineering & Support Manager)
+- ✅ Footer copyright updated to 2026
+- ✅ Removed `calc.html` (obsolete Correios calculator)
+
+#### CSS (1400+ lines rewritten)
+- ✅ Complete rewrite of `styles.css` with CSS custom properties system
+- ✅ Updated `animations.css` with orchestrated scroll reveals and stagger delays
+- ✅ Updated `print.css` for dark theme → print conversion
+- ✅ Responsive: 480/768/1024/1440px breakpoints, mobile-first
+- ✅ Timeline: first item (RAZAC) spans full width on desktop, remaining alternate
+- ✅ Touch/hover/reduced-motion media queries
+
+#### JavaScript
+- ✅ Rewritten `main.js`: typing effect, scroll animations, form handling, skill bars
+- ✅ New: `initFloatingNav()` — scroll-triggered side nav with active state
+- ✅ New: `initAreaToggles()` — accordion for RAZAC experience areas
+- ✅ New: `initCountUp()` — animated number counters in hero metrics
+
+#### Skills Section
+- ✅ Backend: added Oracle (Dapper), MongoDB, RabbitMQ
+- ✅ DevOps renamed to "DevOps & Observability" (80%): Azure DevOps, Pipelines, Grafana/Loki, SonarQube, Consul, Railway
+
+#### Resume
+- ✅ Created `resources/2026-04 - Resume Cezar Sevilhano EN.html` — print-ready HTML resume
+- ✅ Updated RAZAC with 4-area breakdown and full tech stack
+- ✅ Updated Correios with cross-border accounts (Cainiao, Shopee, Encaminhei.com)
+- ✅ Updated Sinerlog with Remessa Conforme
+- ✅ Added personal projects section (Listo, InCasa)
+
+### Breaking Changes
+- Complete visual redesign (light → dark theme)
+- `calc.html` removed
+- Font stack changed from Roboto/Open Sans to Sora/DM Sans/JetBrains Mono
+
+---
+
 <!-- Template for future versions:
 
 ## Version X.Y.Z - Feature Name (YYYY-MM-DD)
