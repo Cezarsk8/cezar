@@ -101,6 +101,54 @@ img {
   display: block;
 }
 
+/* CJK font override for Chinese locale */
+html[lang="zh"] body {
+  font-family: 'DM Sans', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
+  font-family: 'Sora', 'Noto Sans SC', 'PingFang SC', sans-serif;
+}
+
+/* ========== LANGUAGE SWITCHER ========== */
+.lang-switcher {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 200;
+  display: flex;
+  gap: 2px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  backdrop-filter: blur(12px);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.lang-btn.active {
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+}
+
 /* ========== CONTAINER ========== */
 .container {
   max-width: var(--container-max);
@@ -258,33 +306,6 @@ img {
   z-index: 2;
   text-align: center;
   max-width: 800px;
-}
-
-.hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  color: var(--accent-green);
-  background: var(--accent-green-dim);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 2rem;
-}
-
-.hero__badge-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent-green);
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
-  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
 }
 
 .hero__headshot {

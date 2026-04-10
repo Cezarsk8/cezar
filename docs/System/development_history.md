@@ -146,6 +146,37 @@ Complete redesign implementing US003. New "Midnight Architect" dark theme, expan
 
 ---
 
+## Version 2.1.0 - Internationalization EN/PT/ZH (2026-04-09)
+
+### Summary
+Implementing US004: JSON-based client-side internationalization supporting English, Portuguese, and Chinese. Language switcher, auto-detection, localStorage persistence, and CJK font support.
+
+### Changes
+
+#### i18n System
+- ✅ Created `i18n/en.json`, `i18n/pt.json`, `i18n/zh.json` — 83 translation keys each
+- ✅ Created `js/i18n.js` — translation engine with auto-detect, localStorage, and DOM injection
+- ✅ Supports `data-i18n` (text), `data-i18n-html` (HTML), `data-i18n-ph` (placeholder), `data-i18n-list` (array→list)
+
+#### HTML
+- ✅ Added `data-i18n` attributes to 83 translatable elements
+- ✅ Added language switcher component (EN | PT | ZH)
+- ✅ Experience achievement lists use `data-i18n-list` for dynamic rendering
+- ✅ Removed availability badge from hero
+- ✅ Added Noto Sans SC font for Chinese locale
+
+#### JavaScript
+- ✅ `main.js` refactored: typing effect and form messages now read from i18n data
+- ✅ `window.__restartTyping(roles)` exposed for language switching
+- ✅ `window.__i18nForm` stores translated form messages
+
+#### CSS
+- ✅ `.lang-switcher` and `.lang-btn` styles added
+- ✅ CJK font override for `html[lang="zh"]`
+- ✅ Removed orphaned `.hero__badge` styles
+
+---
+
 <!-- Template for future versions:
 
 ## Version X.Y.Z - Feature Name (YYYY-MM-DD)

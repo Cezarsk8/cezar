@@ -1,4 +1,4 @@
-// Main JavaScript — Midnight Architect Portfolio
+// Main JavaScript — Midnight Architect Portfolio (i18n-aware)
 
 document.addEventListener('DOMContentLoaded', function () {
   initTypingEffect();
@@ -9,27 +9,35 @@ document.addEventListener('DOMContentLoaded', function () {
   initFloatingNav();
   initAreaToggles();
   initCountUp();
+  initLangSwitcher();
 });
 
 // ========== TYPING EFFECT ==========
-function initTypingEffect() {
-  const roles = [
-    'Engineering & Support Manager',
-    'Microservices Architect',
-    'AI-Powered Engineering',
-    'Technical Leadership'
-  ];
+var _typingTimeout = null;
 
-  const el = document.getElementById('typing-text');
+function initTypingEffect(roles) {
+  if (!roles) {
+    roles = [
+      'Engineering & Support Manager',
+      'Microservices Architect',
+      'AI-Powered Engineering',
+      'Technical Leadership'
+    ];
+  }
+
+  var el = document.getElementById('typing-text');
   if (!el) return;
 
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let speed = 80;
+  // Clear any running instance
+  if (_typingTimeout) clearTimeout(_typingTimeout);
+
+  var roleIndex = 0;
+  var charIndex = 0;
+  var isDeleting = false;
+  var speed = 80;
 
   function type() {
-    const current = roles[roleIndex];
+    var current = roles[roleIndex];
 
     if (isDeleting) {
       el.textContent = current.substring(0, charIndex - 1);
@@ -50,20 +58,25 @@ function initTypingEffect() {
       speed = 400;
     }
 
-    setTimeout(type, speed);
+    _typingTimeout = setTimeout(type, speed);
   }
 
   type();
 }
 
+// Expose for i18n to restart with new roles
+window.__restartTyping = function (roles) {
+  initTypingEffect(roles);
+};
+
 // ========== SCROLL ANIMATIONS ==========
 function initScrollAnimations() {
-  const animated = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .timeline__item');
+  var animated = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .timeline__item');
   if (!animated.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
@@ -73,15 +86,15 @@ function initScrollAnimations() {
     { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
   );
 
-  animated.forEach((el) => observer.observe(el));
+  animated.forEach(function (el) { observer.observe(el); });
 }
 
 // ========== SMOOTH SCROLL ==========
 function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      var target = document.querySelector(this.getAttribute('href'));
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
@@ -91,40 +104,42 @@ function initSmoothScroll() {
 
 // ========== CONTACT FORM ==========
 function initContactForm() {
-  const form = document.getElementById('contact-form');
+  var form = document.getElementById('contact-form');
   if (!form) return;
 
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const successMsg = document.getElementById('form-success');
-  const errorMsg = document.getElementById('form-error');
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var successMsg = document.getElementById('form-success');
+  var errorMsg = document.getElementById('form-error');
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
+    var t = window.__i18nForm || {};
+
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
+    submitBtn.innerHTML = '<span class="spinner"></span> ' + (t.sending || 'Sending...');
 
     if (successMsg) successMsg.style.display = 'none';
     if (errorMsg) errorMsg.style.display = 'none';
 
-    const name = form.querySelector('#name').value.trim();
-    const email = form.querySelector('#email').value.trim();
-    const message = form.querySelector('#message').value.trim();
+    var name = form.querySelector('#name').value.trim();
+    var email = form.querySelector('#email').value.trim();
+    var message = form.querySelector('#message').value.trim();
 
     if (!name || !email || !message) {
-      showError('Please fill in all fields.');
-      resetButton();
+      showError(t.errorFields || 'Please fill in all fields.');
+      resetButton(t);
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError('Please enter a valid email address.');
-      resetButton();
+      showError(t.errorEmail || 'Please enter a valid email address.');
+      resetButton(t);
       return;
     }
 
     try {
-      const response = await fetch(form.action, {
+      var response = await fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' }
@@ -134,16 +149,16 @@ function initContactForm() {
         form.reset();
         if (successMsg) {
           successMsg.style.display = 'block';
-          successMsg.textContent = 'Message sent successfully. I\'ll get back to you soon.';
+          successMsg.textContent = t.success || 'Message sent successfully.';
         }
       } else {
-        openMailto(name, email, message);
+        openMailto(name, email, message, t);
       }
-    } catch {
-      openMailto(name, email, message);
+    } catch (err) {
+      openMailto(name, email, message, t);
     }
 
-    resetButton();
+    resetButton(t);
   });
 
   function showError(msg) {
@@ -153,29 +168,29 @@ function initContactForm() {
     }
   }
 
-  function resetButton() {
+  function resetButton(t) {
     submitBtn.disabled = false;
-    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + (t.submit || 'Send Message');
   }
 
-  function openMailto(name, email, message) {
-    const mailto = `mailto:cezarsevilhano@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+  function openMailto(name, email, message, t) {
+    var mailto = 'mailto:cezarsevilhano@gmail.com?subject=Portfolio Contact from ' + encodeURIComponent(name) + '&body=' + encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
     window.location.href = mailto;
     if (successMsg) {
       successMsg.style.display = 'block';
-      successMsg.textContent = 'Opening your email client...';
+      successMsg.textContent = t.emailFallback || 'Opening your email client...';
     }
   }
 }
 
 // ========== SKILL BARS ==========
 function initSkillBars() {
-  const bars = document.querySelectorAll('.skill-bar-fill');
+  var bars = document.querySelectorAll('.skill-bar-fill');
   if (!bars.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate');
           observer.unobserve(entry.target);
@@ -185,36 +200,34 @@ function initSkillBars() {
     { threshold: 0.3 }
   );
 
-  bars.forEach((bar) => observer.observe(bar));
+  bars.forEach(function (bar) { observer.observe(bar); });
 }
 
 // ========== FLOATING NAV ==========
 function initFloatingNav() {
-  const nav = document.getElementById('floating-nav');
+  var nav = document.getElementById('floating-nav');
   if (!nav) return;
 
-  const sections = document.querySelectorAll('header[id], section[id]');
-  const links = nav.querySelectorAll('.floating-nav__link');
+  var sections = document.querySelectorAll('header[id], section[id]');
+  var links = nav.querySelectorAll('.floating-nav__link');
 
-  // Show/hide nav based on scroll position
   function updateNav() {
-    const scrollY = window.scrollY;
+    var scrollY = window.scrollY;
     if (scrollY > window.innerHeight * 0.5) {
       nav.classList.add('visible');
     } else {
       nav.classList.remove('visible');
     }
 
-    // Update active link
-    let current = '';
-    sections.forEach((section) => {
-      const top = section.offsetTop - 200;
+    var current = '';
+    sections.forEach(function (section) {
+      var top = section.offsetTop - 200;
       if (scrollY >= top) {
         current = section.getAttribute('id');
       }
     });
 
-    links.forEach((link) => {
+    links.forEach(function (link) {
       link.classList.remove('active');
       if (link.getAttribute('href') === '#' + current) {
         link.classList.add('active');
@@ -228,35 +241,28 @@ function initFloatingNav() {
 
 // ========== AREA TOGGLES (RAZAC experience) ==========
 function initAreaToggles() {
-  const toggles = document.querySelectorAll('.timeline__area-toggle');
-
-  toggles.forEach((toggle) => {
+  document.querySelectorAll('.timeline__area-toggle').forEach(function (toggle) {
     toggle.addEventListener('click', function () {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      const content = this.nextElementSibling;
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      var content = this.nextElementSibling;
 
       this.setAttribute('aria-expanded', !expanded);
-
-      if (expanded) {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
+      content.style.display = expanded ? 'none' : 'block';
     });
   });
 }
 
 // ========== COUNT UP ANIMATION ==========
 function initCountUp() {
-  const counters = document.querySelectorAll('[data-count]');
+  var counters = document.querySelectorAll('[data-count]');
   if (!counters.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-count'), 10);
+          var el = entry.target;
+          var target = parseInt(el.getAttribute('data-count'), 10);
           animateCount(el, 0, target, 1200);
           observer.unobserve(el);
         }
@@ -265,21 +271,17 @@ function initCountUp() {
     { threshold: 0.5 }
   );
 
-  counters.forEach((c) => observer.observe(c));
+  counters.forEach(function (c) { observer.observe(c); });
 }
 
 function animateCount(el, start, end, duration) {
-  const startTime = performance.now();
+  var startTime = performance.now();
 
   function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-
-    // Ease out cubic
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.round(start + (end - start) * eased);
-
-    el.textContent = current;
+    var elapsed = currentTime - startTime;
+    var progress = Math.min(elapsed / duration, 1);
+    var eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(start + (end - start) * eased);
 
     if (progress < 1) {
       requestAnimationFrame(update);
@@ -287,4 +289,17 @@ function animateCount(el, start, end, duration) {
   }
 
   requestAnimationFrame(update);
+}
+
+// ========== LANGUAGE SWITCHER ==========
+function initLangSwitcher() {
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var lang = this.getAttribute('data-lang');
+      if (window.i18n) {
+        window.i18n.switchLanguage(lang);
+      }
+    });
+  });
 }

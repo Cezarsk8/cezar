@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Cezar Sevilhano - Engineering & Support Manager",
+    "description": "Cezar Sevilhano - Engineering & Support Manager at RAZAC. Leading microservices architecture, 20+ repos, CI/CD pipelines, and AI innovation. 17+ years in tech leadership."
+  },
+  "hero": {
+    "subtitle": "Leading microservices architecture, CI/CD pipelines, and AI innovation at",
+    "roles": ["Engineering & Support Manager", "Microservices Architect", "AI-Powered Engineering", "Technical Leadership"],
+    "metrics": { "years": "Years Experience", "apps": "Live Apps", "repos": "Repos Managed" },
+    "cta": { "projects": "View Projects", "cv": "Download CV", "contact": "Get in Touch" },
+    "scroll": "Scroll"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "Featured Projects",
+    "subtitle": "Full-stack applications built with modern tech stacks, deployed and live in production",
+    "listo": {
+      "type": "Price Research App",
+      "tagline": "Track prices, save money. Smart receipt digitization with OCR and cross-store price analytics.",
+      "f1": "Receipt digitization with OCR",
+      "f2": "Price history tracking & analytics",
+      "f3": "Cross-store price comparison",
+      "f4": "Pantry & inventory management",
+      "badge": "Live",
+      "link": "View Demo"
+    },
+    "incasa": {
+      "type": "Gym Management",
+      "tagline": "Your personal fitness command center. AI-powered exercise management with progress tracking.",
+      "f1": "Exercise & workout management",
+      "f2": "Progress photos with comparison",
+      "f3": "Supplement tracking & analytics",
+      "f4": "AI-powered exercise descriptions",
+      "badge": "Live",
+      "link": "View Demo"
+    }
+  },
+  "skills": {
+    "label": "Expertise",
+    "title": "Technical Skills",
+    "backend": "Backend & Architecture",
+    "frontend": "Frontend Development",
+    "management": "Engineering Management",
+    "devops": "DevOps & Observability"
+  },
+  "experience": {
+    "label": "Career",
+    "title": "Experience",
+    "razac": {
+      "title": "Engineering & Support Manager",
+      "location": "São Paulo, Brazil &middot; Hybrid",
+      "area1": "Engineering & Architecture",
+      "area1_items": [
+        "20+ repositories in Azure DevOps organized by domain (Core, Cadastros, Integrations, Financial, Processes, AI)",
+        "Shared libraries via internal NuGet feed (razac-libs)",
+        "Stack: .NET 8, Oracle (Dapper/ODP.NET), MongoDB, RabbitMQ, Docker, API Gateway, Identity Server",
+        "CI/CD with Azure Pipelines &mdash; automated NuGet publishing with change detection",
+        "Static analysis and quality gates with SonarQube"
+      ],
+      "area2": "Product & Development",
+      "area2_items": [
+        "PO collaboration: epic breakdown, user stories, acceptance criteria, test scenarios",
+        "Jira roadmap management: epics, stories, estimates, prioritization",
+        "Technical lead on Tax Analysis MVP &mdash; .NET backend + Railway frontend + LLM integration"
+      ],
+      "area3": "Support & Operations",
+      "area3_items": [
+        "Bug and incident backlog management (Jira project TEC)",
+        "Production debugging with Loki, Grafana, RabbitMQ, Oracle, MongoDB",
+        "Support knowledge base for faster diagnosis and client response",
+        "Service health monitoring via Consul and Portainer"
+      ],
+      "area4": "AI Innovation",
+      "area4_items": [
+        "Generative AI adoption in engineering workflows (Claude Code with MCPs for Jira, Loki, Grafana, RabbitMQ, Oracle, MongoDB, Azure DevOps)",
+        "MVP development and deployment on Railway"
+      ]
+    },
+    "kestraa": {
+      "title": "Project Manager",
+      "location": "São Paulo, Brazil &middot; Hybrid",
+      "items": [
+        "Deployed solution in major agribusiness multinational",
+        "SAP MM module integration (ME21N, J1B1N, FB60)",
+        "Foreign trade import processes for container/bulk cargo"
+      ]
+    },
+    "sinerlog": {
+      "title": "Technical Product Owner",
+      "location": "São Paulo, Brazil &middot; On-site",
+      "items": [
+        "Built e-Invoice system for cross-border retail (SGS integration)",
+        "Developed CrossCommerce Platform API suite",
+        "Created Global Tracking and Sinerlog Courier apps",
+        "Implemented Brazil's Remessa Conforme program &mdash; clearing hundreds of international parcels through the federal tax benefit for couriers"
+      ]
+    },
+    "correios": {
+      "title": "Cross-Border Technical Account Manager",
+      "company": "Correios (Brazilian Post)",
+      "location": "São Paulo, Brazil",
+      "items": [
+        "14 years progressing from operations to cross-border e-commerce leadership",
+        "<strong>Cainiao (Alibaba Group)</strong> &mdash; Technical account manager for Brazil's largest inbound cross-border flow: API integration, delivery SLA governance, and tracking system support",
+        "<strong>Shopee (Sea Group)</strong> &mdash; Helped launch cross-border import operation in Brazil, integrating Shopee's tracking systems with Correios infrastructure",
+        "<strong>Encaminhei.com</strong> &mdash; Led self pick-up point project for last-mile delivery optimization across São Paulo",
+        "Developed Correios PACKET &mdash; import solution processing thousands of international e-commerce parcels, including JSON API documentation",
+        "Managed 300+ corporate client portfolio with delivery SLA monitoring and API integration maintenance",
+        "Coordinated with GRU airport customs and Curitiba hub to resolve cross-border clearance bottlenecks"
+      ]
+    }
+  },
+  "education": {
+    "label": "Education",
+    "title": "Education & Certifications",
+    "cs": { "title": "Computer Systems Analysis", "type": "Technology Degree" },
+    "mba": { "title": "Logistics & Supply Chain MBA", "type": "Specialization" },
+    "history": { "title": "Bachelor's in History", "type": "Bachelor's Degree" },
+    "certs": { "title": "Certifications", "school": "Professional Development" }
+  },
+  "contact": {
+    "label": "Connect",
+    "title": "Get In Touch",
+    "subtitle": "Open to opportunities in São Paulo or Remote. Let's discuss how I can bring value to your team.",
+    "form": {
+      "name": "Name", "email": "Email", "message": "Message",
+      "namePh": "Your name", "emailPh": "your@email.com", "messagePh": "How can I help you?",
+      "submit": "Send Message", "sending": "Sending...",
+      "success": "Message sent successfully. I'll get back to you soon.",
+      "errorFields": "Please fill in all fields.",
+      "errorEmail": "Please enter a valid email address.",
+      "emailFallback": "Opening your email client..."
+    },
+    "noscript": "JavaScript is required for the contact form. Please email me directly at"
+  },
+  "footer": {
+    "nav": { "home": "Home", "projects": "Projects", "skills": "Skills", "experience": "Experience", "contact": "Contact" },
+    "copyright": "&copy; 2026 Cezar Sevilhano. All rights reserved.",
+    "built": "Crafted with precision &mdash; HTML, CSS & JavaScript"
+  }
+}

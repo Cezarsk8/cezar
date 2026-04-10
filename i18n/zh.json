@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Cezar Sevilhano - 工程与支持经理",
+    "description": "Cezar Sevilhano - RAZAC 工程与支持经理。领导微服务架构，管理 20+ 代码仓库，CI/CD 流水线和 AI 创新。17+ 年技术领导经验。"
+  },
+  "hero": {
+    "subtitle": "在 RAZAC 领导微服务架构、CI/CD 流水线和 AI 创新",
+    "roles": ["工程与支持经理", "微服务架构师", "AI 驱动工程", "技术领导力"],
+    "metrics": { "years": "年经验", "apps": "在线应用", "repos": "管理仓库" },
+    "cta": { "projects": "查看项目", "cv": "下载简历", "contact": "联系我" },
+    "scroll": "滚动"
+  },
+  "projects": {
+    "label": "作品集",
+    "title": "精选项目",
+    "subtitle": "使用现代技术栈构建的全栈应用，已部署并在生产环境中运行",
+    "listo": {
+      "type": "价格研究应用",
+      "tagline": "追踪价格，节省开支。通过 OCR 智能收据数字化和跨商店价格分析。",
+      "f1": "OCR 收据数字化",
+      "f2": "价格历史追踪与分析",
+      "f3": "跨商店价格对比",
+      "f4": "储藏室与库存管理",
+      "badge": "上线",
+      "link": "查看演示"
+    },
+    "incasa": {
+      "type": "健身房管理",
+      "tagline": "您的私人健身指挥中心。AI 驱动的运动管理和进度追踪。",
+      "f1": "运动与训练管理",
+      "f2": "进度照片对比",
+      "f3": "补剂追踪与分析",
+      "f4": "AI 生成运动描述",
+      "badge": "上线",
+      "link": "查看演示"
+    }
+  },
+  "skills": {
+    "label": "专业技能",
+    "title": "技术能力",
+    "backend": "后端与架构",
+    "frontend": "前端开发",
+    "management": "工程管理",
+    "devops": "DevOps 与可观测性"
+  },
+  "experience": {
+    "label": "职业经历",
+    "title": "工作经验",
+    "razac": {
+      "title": "工程与支持经理",
+      "location": "巴西圣保罗 &middot; 混合办公",
+      "area1": "工程与架构",
+      "area1_items": [
+        "在 Azure DevOps 管理 20+ 个代码仓库，按领域组织（核心、注册、集成、财务、流程、AI）",
+        "通过内部 NuGet Feed (razac-libs) 定义和维护共享库",
+        "技术栈：.NET 8、Oracle (Dapper/ODP.NET)、MongoDB、RabbitMQ、Docker、API Gateway、Identity Server",
+        "使用 Azure Pipelines 实现 CI/CD &mdash; 带变更检测的自动化 NuGet 发布",
+        "使用 SonarQube 进行静态分析和质量门禁"
+      ],
+      "area2": "产品与开发",
+      "area2_items": [
+        "与 PO 协作：史诗拆分、用户故事、验收标准、测试场景",
+        "Jira 路线图管理：史诗、故事、估算、优先级排序",
+        "税务分析 MVP 技术负责人 &mdash; .NET 后端 + Railway 前端 + LLM 集成"
+      ],
+      "area3": "支持与运维",
+      "area3_items": [
+        "Bug 和事件积压管理（Jira 项目 TEC）",
+        "使用 Loki、Grafana、RabbitMQ、Oracle、MongoDB 进行生产故障排查",
+        "构建支持知识库以加速诊断和客户响应",
+        "通过 Consul 和 Portainer 监控服务健康状态"
+      ],
+      "area4": "AI 创新",
+      "area4_items": [
+        "在工程工作流中采用生成式 AI（Claude Code 与 MCP 集成 Jira、Loki、Grafana、RabbitMQ、Oracle、MongoDB、Azure DevOps）",
+        "在 Railway 上开发和部署 AI 驱动的 MVP"
+      ]
+    },
+    "kestraa": {
+      "title": "项目经理",
+      "location": "巴西圣保罗 &middot; 混合办公",
+      "items": [
+        "在大型农业综合企业跨国公司部署解决方案",
+        "SAP MM 模块集成（ME21N、J1B1N、FB60）",
+        "集装箱和散货的外贸进口流程"
+      ]
+    },
+    "sinerlog": {
+      "title": "技术产品负责人",
+      "location": "巴西圣保罗 &middot; 现场办公",
+      "items": [
+        "构建跨境零售电子发票系统（SGS 集成）",
+        "开发 CrossCommerce Platform API 套件",
+        "创建 Global Tracking 和 Sinerlog Courier 应用",
+        "实施巴西联邦税务局 Remessa Conforme 计划 &mdash; 通过快递公司税收优惠计划清关数百个国际包裹"
+      ]
+    },
+    "correios": {
+      "title": "跨境技术客户经理",
+      "company": "Correios（巴西邮政）",
+      "location": "巴西圣保罗",
+      "items": [
+        "14 年职业发展：从运营到跨境电商领导",
+        "<strong>菜鸟物流（阿里巴巴集团）</strong> &mdash; 巴西最大入境跨境物流的技术客户经理：API 集成、交付 SLA 治理和追踪系统支持",
+        "<strong>Shopee（Sea Group）</strong> &mdash; 协助在巴西启动跨境进口业务，将 Shopee 追踪系统与 Correios 基础设施集成",
+        "<strong>Encaminhei.com</strong> &mdash; 领导自提点项目，优化圣保罗地区的最后一公里配送",
+        "开发 Correios PACKET &mdash; 处理数千个国际电商包裹的进口解决方案，包括 JSON API 文档",
+        "管理 300+ 企业客户组合，进行交付 SLA 监控和 API 集成维护",
+        "协调 GRU 机场海关和库里蒂巴枢纽，解决跨境清关瓶颈"
+      ]
+    }
+  },
+  "education": {
+    "label": "教育",
+    "title": "教育与认证",
+    "cs": { "title": "计算机系统分析", "type": "技术学位" },
+    "mba": { "title": "物流与供应链 MBA", "type": "专业进修" },
+    "history": { "title": "历史学学士", "type": "学士学位" },
+    "certs": { "title": "认证", "school": "职业发展" }
+  },
+  "contact": {
+    "label": "联系",
+    "title": "取得联系",
+    "subtitle": "欢迎圣保罗或远程工作机会。让我们讨论我如何为您的团队创造价值。",
+    "form": {
+      "name": "姓名", "email": "邮箱", "message": "留言",
+      "namePh": "您的姓名", "emailPh": "your@email.com", "messagePh": "有什么可以帮您的？",
+      "submit": "发送消息", "sending": "发送中...",
+      "success": "消息发送成功，我会尽快回复您。",
+      "errorFields": "请填写所有字段。",
+      "errorEmail": "请输入有效的邮箱地址。",
+      "emailFallback": "正在打开您的邮件客户端..."
+    },
+    "noscript": "联系表单需要 JavaScript。请直接发送邮件至"
+  },
+  "footer": {
+    "nav": { "home": "首页", "projects": "项目", "skills": "技能", "experience": "经验", "contact": "联系" },
+    "copyright": "&copy; 2026 Cezar Sevilhano. 保留所有权利。",
+    "built": "精心打造 &mdash; HTML, CSS & JavaScript"
+  }
+}

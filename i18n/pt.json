@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "Cezar Sevilhano - Gerente de Engenharia e Suporte",
+    "description": "Cezar Sevilhano - Gerente de Engenharia e Suporte na RAZAC. Liderando arquitetura de microsserviços, 20+ repositórios, pipelines CI/CD e inovação com IA. 17+ anos em liderança técnica."
+  },
+  "hero": {
+    "subtitle": "Liderando arquitetura de microsserviços, pipelines CI/CD e inovação com IA na",
+    "roles": ["Gerente de Engenharia e Suporte", "Arquiteto de Microsserviços", "Engenharia com IA", "Liderança Técnica"],
+    "metrics": { "years": "Anos de Experiência", "apps": "Apps em Produção", "repos": "Repos Gerenciados" },
+    "cta": { "projects": "Ver Projetos", "cv": "Baixar CV", "contact": "Entre em Contato" },
+    "scroll": "Rolar"
+  },
+  "projects": {
+    "label": "Portfólio",
+    "title": "Projetos em Destaque",
+    "subtitle": "Aplicações full-stack construídas com stacks modernas, implantadas e em produção",
+    "listo": {
+      "type": "App de Pesquisa de Preços",
+      "tagline": "Acompanhe preços, economize dinheiro. Digitalização de recibos com OCR e análise comparativa de preços.",
+      "f1": "Digitalização de recibos com OCR",
+      "f2": "Histórico de preços e análises",
+      "f3": "Comparação de preços entre lojas",
+      "f4": "Gestão de despensa e estoque",
+      "badge": "Ativo",
+      "link": "Ver Demo"
+    },
+    "incasa": {
+      "type": "Gestão de Academia",
+      "tagline": "Seu centro de comando fitness. Gestão de exercícios com IA e acompanhamento de progresso.",
+      "f1": "Gestão de exercícios e treinos",
+      "f2": "Fotos de progresso com comparação",
+      "f3": "Acompanhamento de suplementos",
+      "f4": "Descrições de exercícios com IA",
+      "badge": "Ativo",
+      "link": "Ver Demo"
+    }
+  },
+  "skills": {
+    "label": "Competências",
+    "title": "Habilidades Técnicas",
+    "backend": "Backend e Arquitetura",
+    "frontend": "Desenvolvimento Frontend",
+    "management": "Gestão de Engenharia",
+    "devops": "DevOps e Observabilidade"
+  },
+  "experience": {
+    "label": "Carreira",
+    "title": "Experiência",
+    "razac": {
+      "title": "Gerente de Engenharia e Suporte",
+      "location": "São Paulo, Brasil &middot; Híbrido",
+      "area1": "Engenharia e Arquitetura",
+      "area1_items": [
+        "20+ repositórios no Azure DevOps organizados por domínio (Core, Cadastros, Integrações, Financeiro, Processos, IA)",
+        "Bibliotecas compartilhadas via feed NuGet interno (razac-libs)",
+        "Stack: .NET 8, Oracle (Dapper/ODP.NET), MongoDB, RabbitMQ, Docker, API Gateway, Identity Server",
+        "CI/CD com Azure Pipelines &mdash; publicação automatizada de pacotes NuGet com detecção de mudanças",
+        "Análise estática e quality gates com SonarQube"
+      ],
+      "area2": "Produto e Desenvolvimento",
+      "area2_items": [
+        "Colaboração com PO: quebra de épicos, histórias de usuário, critérios de aceite, cenários de teste",
+        "Gestão de roadmap no Jira: épicos, histórias, estimativas, priorização",
+        "Liderança técnica do MVP de Análise Tributária &mdash; backend .NET + frontend Railway + integração com LLMs"
+      ],
+      "area3": "Suporte e Operações",
+      "area3_items": [
+        "Gestão de backlog de bugs e incidentes (Jira projeto TEC)",
+        "Investigação de falhas em produção com Loki, Grafana, RabbitMQ, Oracle, MongoDB",
+        "Base de conhecimento de suporte para diagnóstico e resposta mais rápidos",
+        "Monitoramento de saúde de serviços via Consul e Portainer"
+      ],
+      "area4": "Inovação com IA",
+      "area4_items": [
+        "Adoção de IA generativa nos fluxos de engenharia (Claude Code com MCPs para Jira, Loki, Grafana, RabbitMQ, Oracle, MongoDB, Azure DevOps)",
+        "Desenvolvimento e deploy de MVPs em Railway"
+      ]
+    },
+    "kestraa": {
+      "title": "Gerente de Projetos",
+      "location": "São Paulo, Brasil &middot; Híbrido",
+      "items": [
+        "Implantação de solução em multinacional do agronegócio",
+        "Integração com módulo SAP MM (ME21N, J1B1N, FB60)",
+        "Processos de importação para container e carga a granel"
+      ]
+    },
+    "sinerlog": {
+      "title": "Product Owner Técnico",
+      "location": "São Paulo, Brasil &middot; Presencial",
+      "items": [
+        "Construção de sistema de e-Invoice para varejo cross-border (integração SGS)",
+        "Desenvolvimento da API suite CrossCommerce Platform",
+        "Criação do Global Tracking e Sinerlog Courier",
+        "Implementação do programa Remessa Conforme da Receita Federal &mdash; desembaraço de centenas de pacotes internacionais"
+      ]
+    },
+    "correios": {
+      "title": "Gerente Técnico de Contas Cross-Border",
+      "company": "Correios",
+      "location": "São Paulo, Brasil",
+      "items": [
+        "14 anos de progressão: operações até liderança em e-commerce cross-border",
+        "<strong>Cainiao (Grupo Alibaba)</strong> &mdash; Gerente técnico de contas para o maior fluxo cross-border de entrada do Brasil: integração de APIs, governança de SLA de entrega e suporte de rastreamento",
+        "<strong>Shopee (Sea Group)</strong> &mdash; Ajudou a lançar a operação de importação cross-border no Brasil, integrando sistemas de rastreamento da Shopee com a infraestrutura dos Correios",
+        "<strong>Encaminhei.com</strong> &mdash; Liderou projeto de pontos de retirada (self pick-up) para otimização de última milha em São Paulo",
+        "Desenvolveu o Correios PACKET &mdash; solução de importação processando milhares de pacotes de e-commerce internacional, incluindo documentação de API JSON",
+        "Gestão de portfólio de 300+ clientes corporativos com monitoramento de SLA e manutenção de integrações de API",
+        "Coordenação com a alfândega do aeroporto de GRU e hub de Curitiba para resolver gargalos de desembaraço"
+      ]
+    }
+  },
+  "education": {
+    "label": "Educação",
+    "title": "Educação e Certificações",
+    "cs": { "title": "Análise de Sistemas Computacionais", "type": "Tecnólogo" },
+    "mba": { "title": "MBA em Logística e Supply Chain", "type": "Especialização" },
+    "history": { "title": "Bacharelado em História", "type": "Bacharelado" },
+    "certs": { "title": "Certificações", "school": "Desenvolvimento Profissional" }
+  },
+  "contact": {
+    "label": "Contato",
+    "title": "Entre em Contato",
+    "subtitle": "Aberto a oportunidades em São Paulo ou Remoto. Vamos conversar sobre como posso agregar valor ao seu time.",
+    "form": {
+      "name": "Nome", "email": "Email", "message": "Mensagem",
+      "namePh": "Seu nome", "emailPh": "seu@email.com", "messagePh": "Como posso ajudar?",
+      "submit": "Enviar Mensagem", "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso. Retornarei em breve.",
+      "errorFields": "Por favor, preencha todos os campos.",
+      "errorEmail": "Por favor, insira um email válido.",
+      "emailFallback": "Abrindo seu cliente de email..."
+    },
+    "noscript": "JavaScript é necessário para o formulário. Por favor, envie email diretamente para"
+  },
+  "footer": {
+    "nav": { "home": "Início", "projects": "Projetos", "skills": "Habilidades", "experience": "Experiência", "contact": "Contato" },
+    "copyright": "&copy; 2026 Cezar Sevilhano. Todos os direitos reservados.",
+    "built": "Construído com precisão &mdash; HTML, CSS & JavaScript"
+  }
+}
