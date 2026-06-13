@@ -177,6 +177,42 @@ Implementing US004: JSON-based client-side internationalization supporting Engli
 
 ---
 
+## Version 2.2.0 - Full Portfolio Expansion (8 Projects) (2026-06-13)
+
+### Summary
+Expanded the Projects section from 2 to all 8 active projects. Honest 2-tier presentation: 4 live apps with working demo links (Listo, InCasa, Allocare, Monei) and 4 in-progress projects shown as "Currently Building" compact cards with no links (zero broken links).
+
+### Changes
+
+#### HTML Structure
+- ✅ Added Allocare featured card (Provider & Cost Management, live demo)
+- ✅ Added Monei featured card (Tax Compliance, live demo)
+- ✅ Added "Currently Building" subsection with 4 compact cards: CarSure, PeopleSense, LightSource, Coronéis do Brasil
+- ✅ Hero metrics updated: "4 Live Apps" + "8 Projects Built" (replaced "2 Live Apps" / "20+ Repos Managed")
+
+#### Screenshots
+- ✅ Captured authenticated dashboards via Playwright login automation: `allocare-screenshot.png`, `monei-screenshot.png` (Monei required Terms-of-Use acceptance flow)
+
+#### CSS
+- ✅ `.projects-compact-grid` (1-col mobile, 2-col ≥768px)
+- ✅ `.project-card--compact` overrides (static badge, smaller title)
+- ✅ `.project-card__badge--dev` (amber In Development / Coming Soon badge)
+- ✅ `.section-header--sub` / `.section-subtitle-heading` for the subsection heading
+- ✅ New tech badges: `.tech-badge--godot`, `.tech-badge--gdscript`
+
+#### i18n (EN/PT/ZH)
+- ✅ Added `hero.metrics.projects`
+- ✅ Added `projects.allocare`, `projects.monei` (type/tagline/f1-f4/badge/link)
+- ✅ Added `projects.building` (label/title) and compact entries for `carsure`, `peoplesense`, `lightsource`, `coroneis`
+
+### Verification Results
+- ✅ 8 project cards render (4 featured + 4 compact)
+- ✅ "Currently Building" subsection and amber badges render correctly
+- ✅ No console errors; all live demo links navigable
+- ✅ Non-live projects intentionally have no demo links (no broken links)
+
+---
+
 <!-- Template for future versions:
 
 ## Version X.Y.Z - Feature Name (YYYY-MM-DD)

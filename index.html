@@ -91,13 +91,13 @@
         </div>
         <div class="hero__metric-divider"></div>
         <div class="hero__metric">
-          <span class="hero__metric-value" data-count="2">0</span>
+          <span class="hero__metric-value" data-count="4">0</span>
           <span class="hero__metric-label" data-i18n="hero.metrics.apps">Live Apps</span>
         </div>
         <div class="hero__metric-divider"></div>
         <div class="hero__metric">
-          <span class="hero__metric-value" data-count="20">0</span><span class="hero__metric-plus">+</span>
-          <span class="hero__metric-label" data-i18n="hero.metrics.repos">Repos Managed</span>
+          <span class="hero__metric-value" data-count="8">0</span>
+          <span class="hero__metric-label" data-i18n="hero.metrics.projects">Projects Built</span>
         </div>
       </div>
 
@@ -195,6 +195,128 @@
                 <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.incasa.link">View Demo</span>
               </a>
             </div>
+          </div>
+        </article>
+
+        <!-- Allocare -->
+        <article class="project-card project-card--featured fade-in">
+          <div class="project-card__image">
+            <img src="images/projects/allocare-screenshot.png" alt="Allocare" loading="lazy" onerror="this.parentElement.classList.add('project-card__image--fallback')">
+            <span class="project-card__badge project-card__badge--live"><i class="fas fa-circle"></i> <span data-i18n="projects.allocare.badge">Live</span></span>
+          </div>
+          <div class="project-card__content">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Allocare</h3>
+              <span class="project-card__type" data-i18n="projects.allocare.type">Provider & Cost Management</span>
+            </div>
+            <p class="project-card__tagline" data-i18n="projects.allocare.tagline">Manage providers, cost centers, and company allocation. Multi-tenant platform with role-based access.</p>
+            <div class="project-card__tech">
+              <span class="tech-badge tech-badge--nextjs">Next.js 15</span>
+              <span class="tech-badge tech-badge--typescript">TypeScript</span>
+              <span class="tech-badge tech-badge--tailwind">Tailwind</span>
+              <span class="tech-badge tech-badge--dotnet">.NET 8</span>
+              <span class="tech-badge tech-badge--postgresql">PostgreSQL</span>
+            </div>
+            <ul class="project-card__features">
+              <li><i class="fas fa-building"></i> <span data-i18n="projects.allocare.f1">Multi-company provider management</span></li>
+              <li><i class="fas fa-sitemap"></i> <span data-i18n="projects.allocare.f2">Cost center allocation</span></li>
+              <li><i class="fas fa-users-cog"></i> <span data-i18n="projects.allocare.f3">Role-based access control</span></li>
+              <li><i class="fas fa-envelope-open-text"></i> <span data-i18n="projects.allocare.f4">Email-driven payment intake</span></li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://allocarefrontend-production.up.railway.app/" class="project-card__link project-card__link--primary" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.allocare.link">View Demo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Monei -->
+        <article class="project-card project-card--featured fade-in">
+          <div class="project-card__image">
+            <img src="images/projects/monei-screenshot.png" alt="Monei" loading="lazy" onerror="this.parentElement.classList.add('project-card__image--fallback')">
+            <span class="project-card__badge project-card__badge--live"><i class="fas fa-circle"></i> <span data-i18n="projects.monei.badge">Live</span></span>
+          </div>
+          <div class="project-card__content">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Monei</h3>
+              <span class="project-card__type" data-i18n="projects.monei.type">Tax Compliance</span>
+            </div>
+            <p class="project-card__tagline" data-i18n="projects.monei.tagline">Tax compliance for Brazilian investors with foreign income. Automated Carnê-Leão pipeline from broker statements.</p>
+            <div class="project-card__tech">
+              <span class="tech-badge tech-badge--nextjs">Next.js</span>
+              <span class="tech-badge tech-badge--typescript">TypeScript</span>
+              <span class="tech-badge tech-badge--tailwind">Tailwind</span>
+              <span class="tech-badge tech-badge--dotnet">.NET 8</span>
+              <span class="tech-badge tech-badge--ai">AI</span>
+            </div>
+            <ul class="project-card__features">
+              <li><i class="fas fa-file-pdf"></i> <span data-i18n="projects.monei.f1">Broker statement parsing (PDF)</span></li>
+              <li><i class="fas fa-robot"></i> <span data-i18n="projects.monei.f2">AI-powered event extraction</span></li>
+              <li><i class="fas fa-file-invoice-dollar"></i> <span data-i18n="projects.monei.f3">Carnê-Leão document generation</span></li>
+              <li><i class="fas fa-chart-line"></i> <span data-i18n="projects.monei.f4">Asset & indicator tracking</span></li>
+            </ul>
+            <div class="project-card__links">
+              <a href="https://frontend-production-ca03.up.railway.app/" class="project-card__link project-card__link--primary" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.monei.link">View Demo</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Building / In Development -->
+      <div class="section-header section-header--sub fade-in">
+        <span class="section-label" data-i18n="projects.building.label">In the Workshop</span>
+        <h3 class="section-subtitle-heading" data-i18n="projects.building.title">Currently Building</h3>
+      </div>
+
+      <div class="projects-compact-grid">
+        <article class="project-card project-card--compact fade-in">
+          <span class="project-card__badge project-card__badge--dev"><i class="fas fa-hammer"></i> <span data-i18n="projects.carsure.badge">In Development</span></span>
+          <h3 class="project-card__title">CarSure</h3>
+          <span class="project-card__type" data-i18n="projects.carsure.type">Insurtech &middot; OBD2</span>
+          <p class="project-card__tagline" data-i18n="projects.carsure.tagline">Mechanical risk insurance scored from real-time OBD2 vehicle telemetry.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge tech-badge--dotnet">.NET 8</span>
+            <span class="tech-badge tech-badge--nextjs">Next.js 15</span>
+            <span class="tech-badge tech-badge--ai">IoT / OBD2</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--compact fade-in">
+          <span class="project-card__badge project-card__badge--dev"><i class="fas fa-hammer"></i> <span data-i18n="projects.peoplesense.badge">In Development</span></span>
+          <h3 class="project-card__title">PeopleSense</h3>
+          <span class="project-card__type" data-i18n="projects.peoplesense.type">HR &amp; People Management</span>
+          <p class="project-card__tagline" data-i18n="projects.peoplesense.tagline">HR platform with AI-assisted people analytics and Jira-integrated delivery tracking.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge tech-badge--dotnet">.NET 8</span>
+            <span class="tech-badge tech-badge--nextjs">Next.js 15</span>
+            <span class="tech-badge tech-badge--ai">AI</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--compact fade-in">
+          <span class="project-card__badge project-card__badge--dev"><i class="fas fa-rocket"></i> <span data-i18n="projects.lightsource.badge">Coming Soon</span></span>
+          <h3 class="project-card__title">LightSource</h3>
+          <span class="project-card__type" data-i18n="projects.lightsource.type">Consulting Site</span>
+          <p class="project-card__tagline" data-i18n="projects.lightsource.tagline">Institutional site for a software consultancy — nearshore engineering for US teams.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge tech-badge--nextjs">Next.js 15</span>
+            <span class="tech-badge tech-badge--typescript">TypeScript</span>
+            <span class="tech-badge tech-badge--tailwind">Tailwind</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--compact fade-in">
+          <span class="project-card__badge project-card__badge--dev"><i class="fas fa-hammer"></i> <span data-i18n="projects.coroneis.badge">In Development</span></span>
+          <h3 class="project-card__title">Coronéis do Brasil</h3>
+          <span class="project-card__type" data-i18n="projects.coroneis.type">Strategy Game</span>
+          <p class="project-card__tagline" data-i18n="projects.coroneis.tagline">City-sim of dynastic politics in Brazil's First Republic (1850–1920). Built in Godot 4.</p>
+          <div class="project-card__tech">
+            <span class="tech-badge tech-badge--godot">Godot 4</span>
+            <span class="tech-badge tech-badge--gdscript">GDScript</span>
+            <span class="tech-badge tech-badge--nextjs">WebGL</span>
           </div>
         </article>
       </div>

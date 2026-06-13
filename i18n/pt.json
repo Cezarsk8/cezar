@@ -6,7 +6,7 @@
   "hero": {
     "subtitle": "Liderando arquitetura de microsserviços, pipelines CI/CD e inovação com IA na",
     "roles": ["Gerente de Engenharia e Suporte", "Arquiteto de Microsserviços", "Engenharia com IA", "Liderança Técnica"],
-    "metrics": { "years": "Anos de Experiência", "apps": "Apps em Produção", "repos": "Repos Gerenciados" },
+    "metrics": { "years": "Anos de Experiência", "apps": "Apps em Produção", "projects": "Projetos Criados", "repos": "Repos Gerenciados" },
     "cta": { "projects": "Ver Projetos", "cv": "Baixar CV", "contact": "Entre em Contato" },
     "scroll": "Rolar"
   },
@@ -33,7 +33,32 @@
       "f4": "Descrições de exercícios com IA",
       "badge": "Ativo",
       "link": "Ver Demo"
-    }
+    },
+    "allocare": {
+      "type": "Gestão de Fornecedores e Custos",
+      "tagline": "Gerencie fornecedores, centros de custo e alocação por empresa. Plataforma multi-tenant com controle de acesso por papel.",
+      "f1": "Gestão de fornecedores multi-empresa",
+      "f2": "Alocação de centros de custo",
+      "f3": "Controle de acesso por papel",
+      "f4": "Captura de pagamentos por e-mail",
+      "badge": "Ativo",
+      "link": "Ver Demo"
+    },
+    "monei": {
+      "type": "Conformidade Fiscal",
+      "tagline": "Conformidade fiscal para investidores brasileiros com renda no exterior. Pipeline automatizado de Carnê-Leão a partir de extratos.",
+      "f1": "Leitura de extratos de corretora (PDF)",
+      "f2": "Extração de eventos com IA",
+      "f3": "Geração de documentos do Carnê-Leão",
+      "f4": "Acompanhamento de ativos e indicadores",
+      "badge": "Ativo",
+      "link": "Ver Demo"
+    },
+    "building": { "label": "Na Bancada", "title": "Em Desenvolvimento" },
+    "carsure": { "type": "Insurtech · OBD2", "tagline": "Seguro de risco mecânico calculado a partir de telemetria OBD2 do veículo em tempo real.", "badge": "Em Desenvolvimento" },
+    "peoplesense": { "type": "Gestão de RH e Pessoas", "tagline": "Plataforma de RH com analytics de pessoas assistido por IA e acompanhamento de entregas integrado ao Jira.", "badge": "Em Desenvolvimento" },
+    "lightsource": { "type": "Site de Consultoria", "tagline": "Site institucional de uma consultoria de software – engenharia nearshore para times dos EUA.", "badge": "Em Breve" },
+    "coroneis": { "type": "Jogo de Estratégia", "tagline": "City-sim de política dinâstica na Primeira República (1850–1920). Feito em Godot 4.", "badge": "Em Desenvolvimento" }
   },
   "skills": {
     "label": "Competências",

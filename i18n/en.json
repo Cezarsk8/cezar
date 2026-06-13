@@ -6,7 +6,7 @@
   "hero": {
     "subtitle": "Leading microservices architecture, CI/CD pipelines, and AI innovation at",
     "roles": ["Engineering & Support Manager", "Microservices Architect", "AI-Powered Engineering", "Technical Leadership"],
-    "metrics": { "years": "Years Experience", "apps": "Live Apps", "repos": "Repos Managed" },
+    "metrics": { "years": "Years Experience", "apps": "Live Apps", "projects": "Projects Built", "repos": "Repos Managed" },
     "cta": { "projects": "View Projects", "cv": "Download CV", "contact": "Get in Touch" },
     "scroll": "Scroll"
   },
@@ -33,7 +33,32 @@
       "f4": "AI-powered exercise descriptions",
       "badge": "Live",
       "link": "View Demo"
-    }
+    },
+    "allocare": {
+      "type": "Provider & Cost Management",
+      "tagline": "Manage providers, cost centers, and company allocation. Multi-tenant platform with role-based access.",
+      "f1": "Multi-company provider management",
+      "f2": "Cost center allocation",
+      "f3": "Role-based access control",
+      "f4": "Email-driven payment intake",
+      "badge": "Live",
+      "link": "View Demo"
+    },
+    "monei": {
+      "type": "Tax Compliance",
+      "tagline": "Tax compliance for Brazilian investors with foreign income. Automated Carnê-Leão pipeline from broker statements.",
+      "f1": "Broker statement parsing (PDF)",
+      "f2": "AI-powered event extraction",
+      "f3": "Carnê-Leão document generation",
+      "f4": "Asset & indicator tracking",
+      "badge": "Live",
+      "link": "View Demo"
+    },
+    "building": { "label": "In the Workshop", "title": "Currently Building" },
+    "carsure": { "type": "Insurtech · OBD2", "tagline": "Mechanical risk insurance scored from real-time OBD2 vehicle telemetry.", "badge": "In Development" },
+    "peoplesense": { "type": "HR & People Management", "tagline": "HR platform with AI-assisted people analytics and Jira-integrated delivery tracking.", "badge": "In Development" },
+    "lightsource": { "type": "Consulting Site", "tagline": "Institutional site for a software consultancy – nearshore engineering for US teams.", "badge": "Coming Soon" },
+    "coroneis": { "type": "Strategy Game", "tagline": "City-sim of dynastic politics in Brazil's First Republic (1850–1920). Built in Godot 4.", "badge": "In Development" }
   },
   "skills": {
     "label": "Expertise",

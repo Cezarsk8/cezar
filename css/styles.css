@@ -730,6 +730,70 @@ html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
   box-shadow: 0 4px 20px rgba(34, 211, 238, 0.25);
 }
 
+/* Sub-header for "Currently Building" */
+.section-header--sub {
+  margin-top: 3.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.section-subtitle-heading {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.4rem 0 0 0;
+}
+
+/* Compact "Building" grid */
+.projects-compact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.tech-badge--godot { background: rgba(71,141,212,0.15); color: #6ea8e0; border-color: rgba(71,141,212,0.3); }
+.tech-badge--gdscript { background: rgba(53,72,99,0.25); color: #9db4d0; border-color: rgba(53,72,99,0.4); }
+
+/* Compact card (no image) */
+.project-card--compact {
+  padding: 1.5rem;
+}
+
+.project-card--compact .project-card__title {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-card--compact .project-card__badge {
+  position: static;
+  display: inline-flex;
+  margin-bottom: 0.9rem;
+}
+
+.project-card--compact .project-card__type {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.project-card--compact .project-card__tagline {
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+}
+
+.project-card--compact .project-card__tech {
+  margin-bottom: 0;
+}
+
+.project-card__badge--dev {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.project-card__badge--dev i {
+  font-size: 0.65rem;
+}
+
 /* ========== SKILLS SECTION ========== */
 .skills-section {
   padding: var(--section-gap) 0;
@@ -1388,6 +1452,10 @@ html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
   }
 
   .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-compact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
