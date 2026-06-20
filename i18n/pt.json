@@ -55,7 +55,7 @@
       "link": "Ver Demo"
     },
     "building": { "label": "Na Bancada", "title": "Em Desenvolvimento" },
-    "carsure": { "type": "Insurtech · OBD2", "tagline": "Seguro de risco mecânico calculado a partir de telemetria OBD2 do veículo em tempo real.", "badge": "Em Desenvolvimento" },
+    "carsure": { "type": "Insurtech · OBD2", "tagline": "Seguro de risco mecânico calculado a partir de telemetria OBD2 do veículo em tempo real.", "badge": "Em Desenvolvimento", "link": "Visitar Site" },
     "peoplesense": { "type": "Gestão de RH e Pessoas", "tagline": "Plataforma de RH com analytics de pessoas assistido por IA e acompanhamento de entregas integrado ao Jira.", "badge": "Em Desenvolvimento" },
     "lightsource": { "type": "Site de Consultoria", "tagline": "Site institucional de uma consultoria de software – engenharia nearshore para times dos EUA.", "badge": "Em Breve" },
     "coroneis": { "type": "Jogo de Estratégia", "tagline": "City-sim de política dinâstica na Primeira República (1850–1920). Feito em Godot 4.", "badge": "Em Desenvolvimento" }

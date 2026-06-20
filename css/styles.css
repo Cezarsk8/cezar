@@ -624,7 +624,8 @@ html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
 .project-card__header {
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
 }
 
@@ -782,6 +783,10 @@ html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
 
 .project-card--compact .project-card__tech {
   margin-bottom: 0;
+}
+
+.project-card--compact .project-card__links {
+  margin-top: 1.25rem;
 }
 
 .project-card__badge--dev {

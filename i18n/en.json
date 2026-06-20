@@ -55,7 +55,7 @@
       "link": "View Demo"
     },
     "building": { "label": "In the Workshop", "title": "Currently Building" },
-    "carsure": { "type": "Insurtech · OBD2", "tagline": "Mechanical risk insurance scored from real-time OBD2 vehicle telemetry.", "badge": "In Development" },
+    "carsure": { "type": "Insurtech · OBD2", "tagline": "Mechanical risk insurance scored from real-time OBD2 vehicle telemetry.", "badge": "In Development", "link": "Visit Site" },
     "peoplesense": { "type": "HR & People Management", "tagline": "HR platform with AI-assisted people analytics and Jira-integrated delivery tracking.", "badge": "In Development" },
     "lightsource": { "type": "Consulting Site", "tagline": "Institutional site for a software consultancy – nearshore engineering for US teams.", "badge": "Coming Soon" },
     "coroneis": { "type": "Strategy Game", "tagline": "City-sim of dynastic politics in Brazil's First Republic (1850–1920). Built in Godot 4.", "badge": "In Development" }
