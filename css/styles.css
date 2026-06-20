@@ -1160,6 +1160,13 @@ html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3, html[lang="zh"] h4 {
   flex-shrink: 0;
 }
 
+.education-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
 .education-card__title {
   font-family: 'Sora', sans-serif;
   font-size: 0.95rem;
