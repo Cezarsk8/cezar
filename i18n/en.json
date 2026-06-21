@@ -56,6 +56,7 @@
     },
     "building": { "label": "In the Workshop", "title": "Currently Building" },
     "carsure": { "type": "Insurtech · OBD2", "tagline": "Mechanical risk insurance scored from real-time OBD2 vehicle telemetry.", "f1": "Real-time OBD2 telemetry capture", "f2": "Mechanical risk scoring engine", "f3": "High-voltage battery health report", "f4": "Telemetry-based insurance pricing", "badge": "Live", "link": "Visit Site" },
+    "method": { "type": "Habit Tracker", "tagline": "Build better habits, one tap a day. Streak-based tracking in a dark-first installable PWA.", "f1": "Build & quit habit tracking", "f2": "Streak stats — current, best, per-year", "f3": "Dark-first installable PWA", "f4": "Multi-user with private data isolation", "badge": "Live", "link": "Visit Site" },
     "peoplesense": { "type": "HR & People Management", "tagline": "HR platform with AI-assisted people analytics and Jira-integrated delivery tracking.", "badge": "In Development" },
     "lightsource": { "type": "Consulting Site", "tagline": "Institutional site for a software consultancy – nearshore engineering for US teams.", "badge": "Coming Soon" },
     "coroneis": { "type": "Strategy Game", "tagline": "City-sim of dynastic politics in Brazil's First Republic (1850–1920). Built in Godot 4.", "badge": "In Development" }

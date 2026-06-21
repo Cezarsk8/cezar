@@ -56,6 +56,7 @@
     },
     "building": { "label": "Na Bancada", "title": "Em Desenvolvimento" },
     "carsure": { "type": "Insurtech · OBD2", "tagline": "Seguro de risco mecânico calculado a partir de telemetria OBD2 do veículo em tempo real.", "f1": "Captura de telemetria OBD2 em tempo real", "f2": "Motor de score de risco mecânico", "f3": "Laudo de saúde da bateria de alta tensão", "f4": "Precificação de seguro por telemetria", "badge": "Ativo", "link": "Visitar Site" },
+    "method": { "type": "Rastreador de Hábitos", "tagline": "Construa hábitos melhores, um toque por dia. Acompanhamento por streaks em um PWA dark-first instalável.", "f1": "Hábitos de construir e largar", "f2": "Estatísticas de streak — atual, melhor, por ano", "f3": "PWA dark-first instalável", "f4": "Multiusuário com isolamento de dados", "badge": "Ativo", "link": "Visitar Site" },
     "peoplesense": { "type": "Gestão de RH e Pessoas", "tagline": "Plataforma de RH com analytics de pessoas assistido por IA e acompanhamento de entregas integrado ao Jira.", "badge": "Em Desenvolvimento" },
     "lightsource": { "type": "Site de Consultoria", "tagline": "Site institucional de uma consultoria de software – engenharia nearshore para times dos EUA.", "badge": "Em Breve" },
     "coroneis": { "type": "Jogo de Estratégia", "tagline": "City-sim de política dinâstica na Primeira República (1850–1920). Feito em Godot 4.", "badge": "Em Desenvolvimento" }
