@@ -1,19 +1,33 @@
 {
   "meta": {
-    "title": "Cezar Sevilhano - 工程与支持经理",
-    "description": "Cezar Sevilhano - RAZAC 工程与支持经理。领导微服务架构，管理 20+ 代码仓库，CI/CD 流水线和 AI 创新。17+ 年技术领导经验。"
+    "title": "Cezar Sevilhano — AI 产品工程师",
+    "description": "从零到生产，独自交付以 AI 为核心的完整产品。十一个产品 — Next.js、.NET、智能体流水线、MCP 工具接口与评估门禁。"
   },
   "hero": {
-    "subtitle": "在 RAZAC 领导微服务架构、CI/CD 流水线和 AI 创新",
-    "roles": ["工程与支持经理", "微服务架构师", "AI 驱动工程", "技术领导力"],
-    "metrics": { "years": "年经验", "apps": "在线应用", "projects": "已构建项目", "repos": "管理仓库" },
-    "cta": { "projects": "查看项目", "cv": "下载简历", "contact": "联系我" },
+    "subtitle": "产品由我设计的智能体流水线构建 — 并在 20+ 微服务 .NET 平台上亲手做 AI 工作，就职于",
+    "roles": [
+      "AI 产品工程师",
+      "智能体与 MCP 工具",
+      "CI 中的评估门禁",
+      "十一个产品，一个人"
+    ],
+    "metrics": {
+      "years": "年经验",
+      "apps": "已构建产品",
+      "projects": "此处展示",
+      "repos": "管理仓库"
+    },
+    "cta": {
+      "projects": "查看项目",
+      "cv": "下载简历",
+      "contact": "联系我"
+    },
     "scroll": "滚动"
   },
   "projects": {
     "label": "作品集",
     "title": "精选项目",
-    "subtitle": "使用现代技术栈构建的全栈应用，已部署并在生产环境中运行",
+    "subtitle": "我从空仓库带到生产环境的十一个产品中的七个。",
     "listo": {
       "type": "价格研究应用",
       "tagline": "追踪价格，节省开支。通过 OCR 智能收据数字化和跨商店价格分析。",
@@ -44,14 +58,66 @@
       "badge": "上线",
       "link": "查看演示"
     },
-    "building": { "label": "工作台", "title": "正在构建" },
-    "carsure": { "type": "保险科技 · OBD2", "tagline": "基于实时 OBD2 车辆遥测数据评估机械风险保险。", "f1": "实时 OBD2 遥测采集", "f2": "机械风险评分引擎", "f3": "高压电池健康报告", "f4": "基于遥测的保险定价", "badge": "上线", "link": "访问网站" },
-    "method": { "type": "习惯追踪", "tagline": "养成更好的习惯，每天一次点击。在深色优先的可安装 PWA 中进行连续打卡追踪。", "f1": "养成与戒除习惯追踪", "f2": "连续打卡统计——当前、最佳、按年", "f3": "深色优先的可安装 PWA", "f4": "多用户私有数据隔离", "badge": "上线", "link": "访问网站" },
-    "fleetbox": { "type": "压铸车收藏", "tagline": "压铸车收藏者的应用——目录、价值，以及可分享的展示柜，收纳你的风火轮及更多。", "f1": "AI 照片识别：拍下车子，确认模具", "f2": "模具 → 版本 规范目录", "f3": "真实成本与诚实的雷亚尔价值区间", "f4": "公开、可分享的收藏展示", "badge": "上线", "link": "访问网站", "linkPlay": "Google Play" },
-    "prontomed": { "type": "健康副驾", "tagline": "在一个地方管理完整的健康史——检查、药物和生理指标，AI 分析师告诉你下一步该做什么。", "f1": "检查、药物与生理指标汇于一条时间线", "f2": "AI 分析师建议你的下一步", "f3": "复诊跟进与提醒", "f4": "私密、符合 LGPD 的健康档案", "badge": "上线", "link": "访问网站" },
-    "peoplesense": { "type": "人力资源与人员管理", "tagline": "具有 AI 辅助人员分析和 Jira 集成交付追踪的人力资源平台。", "badge": "开发中" },
-    "lightsource": { "type": "咨询网站", "tagline": "软件咨询公司的官方网站——为美国团队提供近岸工程。", "badge": "即将推出" },
-    "coroneis": { "type": "策略游戏", "tagline": "巴西第一共和国（1850–1920）王朝政治的城市模拟游戏。使用 Godot 4 构建。", "badge": "开发中" }
+    "building": {
+      "label": "工作台",
+      "title": "正在构建"
+    },
+    "carsure": {
+      "type": "保险科技 · OBD2",
+      "tagline": "基于实时 OBD2 车辆遥测数据评估机械风险保险。",
+      "f1": "实时 OBD2 遥测采集",
+      "f2": "机械风险评分引擎",
+      "f3": "高压电池健康报告",
+      "f4": "基于遥测的保险定价",
+      "badge": "上线",
+      "link": "访问网站"
+    },
+    "method": {
+      "type": "习惯追踪",
+      "tagline": "养成更好的习惯，每天一次点击。在深色优先的可安装 PWA 中进行连续打卡追踪。",
+      "f1": "养成与戒除习惯追踪",
+      "f2": "连续打卡统计——当前、最佳、按年",
+      "f3": "深色优先的可安装 PWA",
+      "f4": "多用户私有数据隔离",
+      "badge": "上线",
+      "link": "访问网站"
+    },
+    "fleetbox": {
+      "type": "压铸车收藏",
+      "tagline": "压铸车收藏者的应用——目录、价值，以及可分享的展示柜，收纳你的风火轮及更多。",
+      "f1": "AI 照片识别：拍下车子，确认模具",
+      "f2": "模具 → 版本 规范目录",
+      "f3": "真实成本与诚实的雷亚尔价值区间",
+      "f4": "公开、可分享的收藏展示",
+      "badge": "上线",
+      "link": "访问网站",
+      "linkPlay": "Google Play"
+    },
+    "prontomed": {
+      "type": "健康副驾",
+      "tagline": "在一个地方管理完整的健康史——检查、药物和生理指标，AI 分析师告诉你下一步该做什么。",
+      "f1": "检查、药物与生理指标汇于一条时间线",
+      "f2": "AI 分析师建议你的下一步",
+      "f3": "复诊跟进与提醒",
+      "f4": "私密、符合 LGPD 的健康档案",
+      "badge": "上线",
+      "link": "访问网站"
+    },
+    "peoplesense": {
+      "type": "人力资源与人员管理",
+      "tagline": "具有 AI 辅助人员分析和 Jira 集成交付追踪的人力资源平台。",
+      "badge": "开发中"
+    },
+    "lightsource": {
+      "type": "咨询网站",
+      "tagline": "软件咨询公司的官方网站——为美国团队提供近岸工程。",
+      "badge": "即将推出"
+    },
+    "coroneis": {
+      "type": "策略游戏",
+      "tagline": "巴西第一共和国（1850–1920）王朝政治的城市模拟游戏。使用 Godot 4 构建。",
+      "badge": "开发中"
+    }
   },
   "skills": {
     "label": "专业技能",
@@ -131,19 +197,36 @@
   "education": {
     "label": "教育",
     "title": "教育与认证",
-    "cs": { "title": "计算机系统分析", "type": "技术学位" },
-    "mba": { "title": "物流与供应链 MBA", "type": "专业进修" },
-    "history": { "title": "历史学学士", "type": "学士学位" },
-    "certs": { "title": "认证", "school": "职业发展" }
+    "cs": {
+      "title": "计算机系统分析",
+      "type": "技术学位"
+    },
+    "mba": {
+      "title": "物流与供应链 MBA",
+      "type": "专业进修"
+    },
+    "history": {
+      "title": "历史学学士",
+      "type": "学士学位"
+    },
+    "certs": {
+      "title": "认证",
+      "school": "职业发展"
+    }
   },
   "contact": {
     "label": "联系",
     "title": "取得联系",
     "subtitle": "欢迎圣保罗或远程工作机会。让我们讨论我如何为您的团队创造价值。",
     "form": {
-      "name": "姓名", "email": "邮箱", "message": "留言",
-      "namePh": "您的姓名", "emailPh": "your@email.com", "messagePh": "有什么可以帮您的？",
-      "submit": "发送消息", "sending": "发送中...",
+      "name": "姓名",
+      "email": "邮箱",
+      "message": "留言",
+      "namePh": "您的姓名",
+      "emailPh": "your@email.com",
+      "messagePh": "有什么可以帮您的？",
+      "submit": "发送消息",
+      "sending": "发送中...",
       "success": "消息发送成功，我会尽快回复您。",
       "errorFields": "请填写所有字段。",
       "errorEmail": "请输入有效的邮箱地址。",
@@ -152,7 +235,13 @@
     "noscript": "联系表单需要 JavaScript。请直接发送邮件至"
   },
   "footer": {
-    "nav": { "home": "首页", "projects": "项目", "skills": "技能", "experience": "经验", "contact": "联系" },
+    "nav": {
+      "home": "首页",
+      "projects": "项目",
+      "skills": "技能",
+      "experience": "经验",
+      "contact": "联系"
+    },
     "copyright": "&copy; 2026 Cezar Sevilhano. 保留所有权利。",
     "built": "精心打造 &mdash; HTML, CSS & JavaScript"
   }
