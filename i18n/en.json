@@ -34,16 +34,6 @@
       "badge": "Live",
       "link": "View Demo"
     },
-    "allocare": {
-      "type": "Provider & Cost Management",
-      "tagline": "Manage providers, cost centers, and company allocation. Multi-tenant platform with role-based access.",
-      "f1": "Multi-company provider management",
-      "f2": "Cost center allocation",
-      "f3": "Role-based access control",
-      "f4": "Email-driven payment intake",
-      "badge": "Live",
-      "link": "View Demo"
-    },
     "monei": {
       "type": "Tax Compliance",
       "tagline": "Tax compliance for Brazilian investors with foreign income. Automated Carnê-Leão pipeline from broker statements.",

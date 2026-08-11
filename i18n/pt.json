@@ -34,16 +34,6 @@
       "badge": "Ativo",
       "link": "Ver Demo"
     },
-    "allocare": {
-      "type": "Gestão de Fornecedores e Custos",
-      "tagline": "Gerencie fornecedores, centros de custo e alocação por empresa. Plataforma multi-tenant com controle de acesso por papel.",
-      "f1": "Gestão de fornecedores multi-empresa",
-      "f2": "Alocação de centros de custo",
-      "f3": "Controle de acesso por papel",
-      "f4": "Captura de pagamentos por e-mail",
-      "badge": "Ativo",
-      "link": "Ver Demo"
-    },
     "monei": {
       "type": "Conformidade Fiscal",
       "tagline": "Conformidade fiscal para investidores brasileiros com renda no exterior. Pipeline automatizado de Carnê-Leão a partir de extratos.",
