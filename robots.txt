@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cezarsk8.github.io/cezar/sitemap.xml
