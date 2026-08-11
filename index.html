@@ -74,13 +74,17 @@
     persistence: 'memory',
     person_profiles: 'identified_only',
     disable_session_recording: true,
-    capture_pageview: true,
+    capture_pageview: false,
     autocapture: true
   });
+  // ORDEM IMPORTA: com capture_pageview:true o $pageview sai DENTRO do init, antes destes
+  // register() -- e chegaria sem `app`/`src`. Medido: so o $pageleave vinha marcado.
+  // Por isso o pageview e disparado a mao, depois das propriedades estarem registradas.
   posthog.register({ app: 'portfolio' });
   (function () {
     var v = new URLSearchParams(window.location.search).get('v');
     if (v) posthog.register({ src: v });
+    posthog.capture('$pageview');
   })();
   </script>
 </head>
